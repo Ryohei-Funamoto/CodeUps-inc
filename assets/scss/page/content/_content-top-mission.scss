@@ -1,0 +1,30 @@
+@use "global" as *;
+@use "sass:math";
+
+.content-top-mission__container {
+  @include mq('md') {
+    max-width: rem(648);
+  }
+}
+
+.content-top-mission__title {
+  font-size: rem(20);
+  letter-spacing: math.div(2, 20) * 1em;
+  text-align: center;
+
+  @include mq('md') {
+    font-size: rem(25);
+    letter-spacing: math.div(0.5, 25) * 1em;
+  }
+}
+
+.content-top-mission__description {
+  font-size: rem(16);
+  letter-spacing: math.div(2, 16) * 1em;
+  margin-top: rem(24);
+
+  @include mq('md') {
+    letter-spacing: math.div(0.5, 16) * 1em;
+    @include lineHeight(16, 35);
+  }
+}

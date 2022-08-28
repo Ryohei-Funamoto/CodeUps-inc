@@ -1,0 +1,128 @@
+@use "global" as *;
+@use "sass:math";
+
+.p-blog-card {
+  background-color: $color-white;
+  display: flex;
+  flex-direction: column;
+  transition: background-color $duration;
+}
+
+.p-blog-card:focus,
+.p-blog-card:hover {
+  @include mq('hover-pc') {
+    background-color: $color-bg;
+  }
+}
+
+.p-blog-card__head {
+  overflow: hidden;
+}
+
+.p-blog-card__image {
+  position: relative;
+  transform: scale(1);
+  transition: transform $duration;
+}
+
+.p-blog-card:focus .p-blog-card__image,
+.p-blog-card:hover .p-blog-card__image {
+  @include mq('hover-pc') {
+    transform: scale(1.1);
+  }
+}
+
+.p-blog-card__image::before {
+  content: '';
+  display: block;
+  @include paddingTopHack(335, 223);
+  
+  @include mq('md') {
+    @include paddingTopHack(350, 233);
+  }
+}
+
+.p-blog-card__image>img {
+  height: 100%;
+  left: 0;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center center;
+  position: absolute;
+  top: 0;
+}
+
+.p-blog-card__body {
+  padding: rem(12) rem(23) 0;
+}
+
+.p-blog-card__title {
+  color: $color-text02;
+  font-size: rem(18);
+  font-weight: $medium;
+  letter-spacing: math.div(1, 18) * 1em;
+  line-height: 2;
+  transition: color $duration;
+}
+
+.p-blog-card:focus .p-blog-card__title,
+.p-blog-card:hover .p-blog-card__title {
+  @include mq('hover-pc') {
+    color: $color-white;
+  }
+}
+
+.p-blog-card__description {
+  color: $color-text02;
+  font-size: rem(14);
+  letter-spacing: math.div(1, 14) * 1em;
+  @include lineHeight(14, 26);
+  margin-top: rem(12);
+  transition: color $duration;
+}
+
+.p-blog-card:focus .p-blog-card__description,
+.p-blog-card:hover .p-blog-card__description {
+  @include mq('hover-pc') {
+    color: $color-white;
+  }
+}
+
+.p-blog-card__footer {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+  padding: rem(12) rem(23) rem(16);
+}
+
+.p-blog-card__category-wrapper {
+  font-size: 0;
+}
+
+.p-blog-card__category {
+  background-color: $color-main-accent02;
+  color: $color-black;
+  display: inline-block;
+  font-size: rem(14);
+  line-height: 1;
+  min-width: rem(70);
+  padding: rem(6) rem(8);
+  text-align: center;
+}
+
+.p-blog-card__published {
+  color: $color-text02;
+  font-size: rem(14);
+  letter-spacing: math.div(1, 14) * 1em;
+  min-width: rem(98);
+  padding-left: rem(18);
+  transition: color $duration;
+}
+
+.p-blog-card:focus .p-blog-card__published,
+.p-blog-card:hover .p-blog-card__published {
+  @include mq('hover-pc') {
+    color: $color-white;
+  }
+}

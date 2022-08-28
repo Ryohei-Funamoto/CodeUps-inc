@@ -1,0 +1,37 @@
+@use "global" as *;
+@use "sass:math";
+
+.p-input-group {
+  @include mq('md') {
+    display: flex;
+  }
+}
+
+.p-input-group__label {
+  font-size: rem(14);
+  letter-spacing: math.div(0.7, 14) * 1em;
+  @include lineHeight(14, 24);
+
+  @include mq('md') {
+    padding: rem(8) rem(24) 0 0;
+    text-align: right;
+    width: rem(176);
+  }
+}
+
+.p-input-group__label--required::before {
+  content: "※";
+}
+
+.p-input-group__field {
+  margin-top: rem(16);
+
+  @include mq('md') {
+    margin-top: 0;
+    width: calc(100% - #{rem(176 + 138)});
+  }
+}
+
+.p-input-group__radio {
+  margin-bottom: rem(-16);
+}

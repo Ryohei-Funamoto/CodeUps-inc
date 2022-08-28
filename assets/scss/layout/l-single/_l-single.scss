@@ -1,0 +1,17 @@
+@use "global" as *;
+
+.l-single {
+  padding: rem(66) 0 rem(120);
+
+  @include mq('md') {
+    padding: rem(66) 0 rem(150);
+  }
+}
+
+.l-single__article {
+  margin-top: rem(78);
+
+  @include mq('md') {
+    margin-top: rem(90);
+  }
+}

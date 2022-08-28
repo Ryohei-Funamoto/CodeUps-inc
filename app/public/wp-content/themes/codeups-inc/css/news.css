@@ -1,0 +1,44 @@
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.l-news {
+  padding-bottom: 7.5rem;
+}
+@media screen and (min-width: 768px) {
+  .l-news {
+    padding-bottom: 9.375rem;
+  }
+}
+
+.l-news__archive {
+  margin-top: 5.3125rem;
+}
+@media screen and (min-width: 768px) {
+  .l-news__archive {
+    margin-top: 4.375rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .news-archive__container {
+    max-width: 58.75rem;
+  }
+}
+
+.news-archive__item:nth-child(n+2) {
+  margin-top: 2rem;
+}
+/*# sourceMappingURL=news.css.map */

@@ -1,0 +1,33 @@
+@use "global" as *;
+
+/* テキストボックスの独自スタイル */
+.p-textbox {
+  display: block;
+}
+
+.p-textbox input[type="text"],
+.p-textbox input[type="email"],
+.p-textbox textarea {
+  background-color: $color-white;
+  color: $color-text02;
+  font-size: rem(14);
+  padding: rem(11) rem(9);
+
+  @include mq('md') {
+    padding: rem(9) rem(16);
+  }
+}
+
+.p-textbox input[type="text"][aria-invalid="true"],
+.p-textbox input[type="email"][aria-invalid="true"],
+.p-textbox textarea[aria-invalid="true"] {
+  background-color: $color-bg-danger;
+}
+
+.p-textbox textarea {
+  height: rem(250);
+
+  @include mq('md') {
+    height: rem(300);
+  }
+}

@@ -1,0 +1,50 @@
+@use "global" as *;
+
+.p-pagination {
+  display: flex;
+  justify-content: center;
+}
+
+.p-pagination span,
+.p-pagination a {
+  border: rem(1) solid $color-white;
+  display: inline-block;
+  font-size: rem(16);
+  line-height: 1;
+  padding: rem(3) rem(7);
+}
+
+.p-pagination span.current {
+  background-color: $color-white;
+  color: $color-text02;
+}
+
+.p-pagination a {
+  color: $color-white;
+  transition: background-color $duration, color $duration;
+}
+
+.p-pagination a:focus,
+.p-pagination a:hover {
+  @include mq('hover-pc') {
+    background-color: $color-white;
+    color: $color-text02;
+  }
+}
+
+.p-pagination a.prev,
+.p-pagination a.next {
+  text-transform: uppercase;
+}
+
+.p-pagination .page-numbers:not(:last-child) {
+  margin-right: rem(16);
+}
+
+.p-pagination .page-numbers.prev {
+  margin-right: rem(24);
+}
+
+.p-pagination .page-numbers.next {
+  margin-left: rem(8);
+}

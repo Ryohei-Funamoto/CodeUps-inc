@@ -1,0 +1,92 @@
+@use "global" as *;
+@use "sass:math";
+@use "sass:color";
+
+.home-mv-slider__slide {
+  position: relative;
+}
+
+.home-mv-slider__slide::after {
+  background-color: color.adjust($color-main, $alpha: -0.8);
+  content: '';
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+@keyframes zoomUp {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+.swiper-slide-active .home-mv-slider__image,
+.swiper-slide-duplicate-active .home-mv-slider__image,
+.swiper-slide-prev .home-mv-slider__image {
+  animation-delay: 0s;
+  animation-direction: normal;
+  animation-duration: 10s;
+  animation-fill-mode: both;
+  animation-iteration-count: 1;
+  animation-name: zoomUp;
+  animation-timing-function: linear;
+}
+
+.home-mv-slider__image {
+  height: 100%;
+  width: 100%;
+}
+
+.home-mv-slider__image>picture {
+  height: 100%;
+  width: 100%;
+}
+
+.home-mv-slider__image>picture>img {
+  height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.home-mv-slider__content {
+  left: 50%;
+  letter-spacing: math.div(0.5, 28) * 1em;
+  padding: 0 rem(20);
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  z-index: $layer-up;
+}
+
+.home-mv-slider__main-title {
+  font-size: rem(28);
+  font-weight: $bold;
+  letter-spacing: math.div(0.5, 28) * 1em;
+
+  @include mq('md') {
+    font-size: rem(50);
+    letter-spacing: math.div(0.5, 50) * 1em;
+  }
+}
+
+.home-mv-slider__sub-title {
+  font-size: rem(20);
+  font-weight: $bold;
+  letter-spacing: math.div(0.5, 20) * 1em;
+  margin-top: rem(24);
+
+  @include mq('md') {
+    font-size: rem(25);
+    letter-spacing: math.div(0.5, 25) * 1em;
+  }
+}

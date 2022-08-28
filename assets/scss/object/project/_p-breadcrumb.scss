@@ -1,0 +1,21 @@
+@use "global" as *;
+
+.p-breadcrumb {
+  font-size: rem(16);
+}
+
+.p-breadcrumb span,
+.p-breadcrumb a {
+  color: $color-white;
+}
+
+.p-breadcrumb a {
+  transition: opacity 0.3s;
+}
+
+.p-breadcrumb a:focus,
+.p-breadcrumb a:hover {
+  @include mq('hover-pc') {
+    opacity: $opacity;
+  }
+}

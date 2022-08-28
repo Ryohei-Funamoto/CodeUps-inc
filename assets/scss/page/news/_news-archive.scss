@@ -1,0 +1,11 @@
+@use "global" as *;
+
+.news-archive__container {
+  @include mq('md') {
+    max-width: rem(940);
+  }
+}
+
+.news-archive__item:nth-child(n + 2) {
+  margin-top: rem(32);
+}

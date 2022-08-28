@@ -28,4 +28,3 @@
 * objectフォルダ内には、component, project, utilityフォルダがあります。
 * pageフォルダには、各ページ固有のCSSを定義したファイルを格納します。
 * structureフォルダには、JSライブラリ等のCSSを格納します。
-# CodeUps-Inc

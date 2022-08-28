@@ -1,0 +1,87 @@
+@use "global" as *;
+@use "sass:math";
+
+.works-card {
+  display: block;
+}
+
+.works-card__head {
+  margin: 0 calc(50% - 50vw);
+  overflow: hidden;
+  position: relative;
+  width: 100vw;
+
+  @include mq('md') {
+    margin: 0;
+    width: auto;
+  }
+}
+
+.works-card__image {
+  position: relative;
+}
+
+.works-card__image::before {
+  content: '';
+  display: block;
+  @include paddingTopHack(375, 249);
+
+  @include mq('md') {
+    @include paddingTopHack(525, 349);
+  }
+}
+
+.works-card__image>img {
+  backface-visibility: hidden;
+  height: 100%;
+  left: 0;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center center;
+  position: absolute;
+  top: 0;
+  transition: transform 0.3s;
+}
+
+.works-card:focus .works-card__image>img,
+.works-card:hover .works-card__image>img {
+  @include mq('hover-pc') {
+    transform: scale(1.1);
+  }
+}
+
+.works-card__category {
+  background-color: $color-main;
+  color: $color-text;
+  font-size: rem(16);
+  letter-spacing: math.div(2, 16) * 1em;
+  line-height: 1;
+  padding: rem(12) rem(20);
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.works-card__body {
+  margin-top: rem(24);
+
+  @include mq('md') {
+    margin-top: rem(12);
+  }
+}
+
+.works-card__title {
+  color: $color-text;
+  display: flex;
+  font-size: rem(20);
+  justify-content: center;
+  letter-spacing: math.div(2, 20) * 1em;
+  transition: color $duration;
+}
+
+.works-card:focus .works-card__title,
+.works-card:hover .works-card__title {
+  @include mq('hover-pc') {
+    color: $color-main-accent;
+  }
+}

@@ -1,0 +1,32 @@
+@use "global" as *;
+@use "sass:math";
+
+.works-point {
+  border: rem(1) solid $color-white;
+  padding: 0 rem(10) rem(33);
+
+  @include mq('md') {
+    padding: 0 rem(22) rem(32);
+  }
+}
+
+.works-point__title {
+  background-color: $color-main;
+  border: rem(1) solid $color-white;
+  border-radius: rem(32);
+  display: inline-block;
+  font-size: rem(20);
+  letter-spacing: math.div(0.4, 20) * 1em;
+  padding: rem(7) rem(24);
+  transform: translate(0, rem(-23));
+
+  @include mq('md') {
+    transform: translate(rem(17), rem(-23));
+  }
+}
+
+.works-point__description {
+  font-size: rem(16);
+  letter-spacing: math.div(0.4, 16) * 1em;
+  @include lineHeight(16, 35);
+}

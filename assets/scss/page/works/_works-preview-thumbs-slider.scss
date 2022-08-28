@@ -1,0 +1,29 @@
+@use "global" as *;
+
+.works-preview-thumbs-slider__slide {
+  opacity: 0.5;
+}
+
+.works-preview-thumbs-slider__slide.swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+.works-preview-thumbs-slider__image {
+  position: relative;
+}
+
+.works-preview-thumbs-slider__image::before {
+  content: '';
+  display: block;
+  padding-top: 100%;
+}
+
+.works-preview-thumbs-slider__image>img {
+  height: 100%;
+  left: 0;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center center;
+  position: absolute;
+  top: 0;
+}

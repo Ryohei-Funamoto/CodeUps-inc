@@ -1,0 +1,52 @@
+@use "global" as *;
+
+.home-diagonal-line {
+  position: relative;
+}
+
+.home-diagonal-line__body {
+  background-color: $color-main;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  z-index: $layer-diagonal-line;
+}
+
+.home-diagonal-line__body::after {
+  background-color: $color-main-accent;
+  content: '';
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.home-diagonal-line__body--downward {
+  height: rem(680);
+  top: rem(120);
+
+  @include mq('md') {
+    height: rem(1280);
+    top: rem(87);
+  }
+}
+
+.home-diagonal-line__body--downward::after {
+  clip-path: polygon(0.1% 0%, 100% 99.9%, 99.9% 100%, 0% 0.1%);
+}
+
+.home-diagonal-line__body--upward {
+  height: rem(1399);
+  top: rem(-510);
+
+  @include mq('md') {
+    height: rem(1280);
+    top: rem(-60);
+  }
+}
+
+.home-diagonal-line__body--upward::after {
+  clip-path: polygon(0% 99.9%, 99.9% 0%, 100% 0.1%, 0.1% 100%);
+}

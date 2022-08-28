@@ -1,0 +1,25 @@
+@use "global" as *;
+
+.home-works-image-slider__image {
+  position: relative;
+}
+
+.home-works-image-slider__image::before {
+  content: '';
+  display: block;
+  @include paddingTopHack(375, 260);
+
+  @include mq('md') {
+    @include paddingTopHack(557, 389);
+  }
+}
+
+.home-works-image-slider__image>img {
+  height: 100%;
+  left: 0;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center center;
+  position: absolute;
+  top: 0;
+}

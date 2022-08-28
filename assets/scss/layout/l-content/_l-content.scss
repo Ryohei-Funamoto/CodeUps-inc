@@ -1,0 +1,21 @@
+@use "global" as *;
+
+.l-content {
+  padding-bottom: rem(120);
+
+  @include mq('md') {
+    padding-bottom: rem(150);
+  }
+}
+
+.l-content__top-mission {
+  margin-top: rem(85);
+}
+
+.l-content__sub-mission {
+  margin-top: rem(80);
+
+  @include mq('md') {
+    margin-top: rem(150);
+  }
+}

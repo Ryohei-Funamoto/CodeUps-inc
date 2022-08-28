@@ -1,0 +1,29 @@
+@use "global" as *;
+@use "sass:math";
+
+.p-related-posts__title {
+  background-color: $color-bg;
+  border: rem(1) solid $color-white;
+  font-size: rem(16);
+  letter-spacing: math.div(2, 16) * 1em;
+  padding: rem(9) rem(27);
+  text-align: center;
+}
+
+.p-related-posts__items {
+  column-gap: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: rem(32);
+  row-gap: rem(24);
+
+  @include mq('md') {
+    column-gap: rem(32);
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 0;
+  }
+}
+
+.p-related-posts__item {
+  display: flex;
+}

@@ -1,0 +1,37 @@
+@use "global" as *;
+@use "sass:math";
+
+.p-footer-nav__items {
+  text-align: center;
+
+  @include mq('md') {
+    display: flex;
+  }
+}
+
+.p-footer-nav__items>li {
+  font-size: rem(16);
+  letter-spacing: math.div(1.2, 16) * 1em;
+
+  @include mq('md') {
+    letter-spacing: math.div(2, 16) * 1em;
+  }
+}
+
+.p-footer-nav__items>li>a {
+  color: $color-white;
+  display: block;
+  padding: rem(4) rem(12);
+  transition: opacity $duration;
+
+  @include mq('md') {
+    padding: rem(8) rem(16);
+  }
+}
+
+.p-footer-nav__items>li>a:focus,
+.p-footer-nav__items>li>a:hover {
+  @include mq('hover-pc') {
+    opacity: $opacity;
+  }
+}

@@ -1,0 +1,49 @@
+@use "global" as *;
+@use "sass:math";
+
+.p-drawer-nav__items {
+  text-align: center;
+}
+
+.p-drawer-nav__items>li>a {
+  color: $color-white;
+  display: block;
+  font-size: rem(16);
+  font-weight: $regular;
+  letter-spacing: math.div(2, 16) * 1em;
+  padding: rem(16);
+}
+
+.p-drawer-nav__items>li>a::before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  margin-right: rem(8);
+}
+
+.p-drawer-nav__items>li.home>a::before {
+  content: '\e3af';
+}
+
+.p-drawer-nav__items>li.news>a::before {
+  content: '\f05a';
+}
+
+.p-drawer-nav__items>li.works>a::before {
+  content: '\f121';
+}
+
+.p-drawer-nav__items>li.content>a::before {
+  content: '\f201';
+}
+
+.p-drawer-nav__items>li.blog>a::before {
+  content: '\f304';
+}
+
+.p-drawer-nav__items>li.overview>a::before {
+  content: '\f1ad';
+}
+
+.p-drawer-nav__items>li.contact>a::before {
+  content: '\f0e0';
+}

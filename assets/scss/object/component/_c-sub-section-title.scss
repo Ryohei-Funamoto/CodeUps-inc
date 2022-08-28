@@ -1,0 +1,13 @@
+@use "global" as *;
+@use "sass:color";
+
+.c-sub-section-title {
+  color: color.adjust($color-main-accent, $alpha: -0.8);
+  font-family: $font-family-sub;
+  font-size: rem(50);
+  text-transform: capitalize;
+
+  @include mq('md') {
+    font-size: rem(110);
+  }
+}

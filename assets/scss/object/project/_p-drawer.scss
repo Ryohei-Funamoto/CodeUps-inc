@@ -1,0 +1,27 @@
+@use "global" as *;
+
+.p-drawer {
+  padding-bottom: rem(80);
+  background-color: $color-main;
+  padding-top: rem(80);
+  transform: translateX(105%);
+  transition: transform $duration;
+}
+
+.p-drawer.is-open {
+  transform: translateX(0)
+}
+
+.p-drawer__container {
+  height: 100%;
+  max-width: 100%;
+  padding: 0 $padding-sp;
+  width: 100%;
+}
+
+.p-drawer__scroll {
+  height: 100%;
+  max-width: 100%;
+  overflow-y: auto;
+  width: 100%;
+}

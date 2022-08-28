@@ -1,0 +1,51 @@
+@use "global" as *;
+@use "sass:math";
+
+.p-footer-contact {
+  background-color: $color-bg02;
+}
+
+.p-footer-contact__title-wrapper {
+  position: relative;
+}
+
+.p-footer-contact__sub-title {
+  text-align: center;
+
+  @include mq('md') {
+    text-align: left;
+  }
+}
+
+.p-footer-contact__main-title {
+  bottom: 0;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+  
+  @include mq('md') {
+    bottom: auto;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.p-footer-contact__description {
+  font-size: rem(16);
+  letter-spacing: math.div(2, 16) * 1em;
+  margin-top: rem(20);
+
+  @include mq('md') {
+    margin-top: rem(-24);
+    text-align: center;
+  }
+}
+
+.p-footer-contact__button {
+  margin-top: rem(40);
+  text-align: center;
+
+  @include mq('md') {
+    margin-top: rem(60);
+  }
+}

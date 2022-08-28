@@ -1,0 +1,9 @@
+@use "global" as *;
+
+.l-footer-contact {
+  padding: rem(32) 0 rem(64);
+
+  @include mq('md') {
+    padding: rem(60) 0 rem(150);
+  }
+}

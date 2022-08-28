@@ -1,0 +1,49 @@
+@use "global" as *;
+@use "sass:math";
+
+.contact-form__error-message {
+  color: $color-text-danger;
+  font-size: rem(16);
+  letter-spacing: math.div(2, 16) * 1em;
+  opacity: 0;
+  text-align: center;
+  visibility: hidden;
+}
+
+.wpcf7-form.invalid .contact-form__error-message {
+  opacity: 1;
+  visibility: visible;
+}
+
+.contact-form__items {
+  margin-top: rem(32);
+
+  @include mq('md') {
+    margin-top: rem(30);
+  }
+}
+
+.contact-form__item:nth-child(n + 2) {
+  margin-top: rem(32);
+
+  @include mq('md') {
+    margin-top: rem(45);
+  }
+}
+
+.contact-form__acceptance {
+  margin-top: rem(48);
+
+  @include mq('md') {
+    margin-top: rem(56);
+  }
+}
+
+.contact-form__button {
+  margin-top: rem(48);
+  text-align: center;
+
+  @include mq('md') {
+    margin-top: rem(56);
+  }
+}

@@ -1,0 +1,14 @@
+@use "global" as *;
+
+.works-archive__items {
+  column-gap: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: rem(48);
+
+  @include mq('md') {
+    column-gap: rem(48);
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: rem(114);
+  }
+}

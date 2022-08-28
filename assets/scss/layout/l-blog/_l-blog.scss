@@ -1,0 +1,17 @@
+@use "global" as *;
+
+.l-blog {
+  padding-bottom: rem(120);
+
+  @include mq('md') {
+    padding-bottom: rem(150);
+  }
+}
+
+.l-blog__archive {
+  margin-top: rem(36);
+
+  @include mq('md') {
+    margin-top: rem(40);
+  }
+}

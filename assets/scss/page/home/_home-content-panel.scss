@@ -1,0 +1,71 @@
+@use "global" as *;
+@use "sass:math";
+@use "sass:color";
+
+.home-content-panel {
+  display: block;
+  position: relative;
+}
+
+.home-content-panel::after {
+  background-color: color.adjust($color-white, $alpha: -0.4);
+  content: '';
+  display: block;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  transition: opacity $duration, visibility $duration;
+  visibility: hidden;
+  width: 100%;
+  z-index: $layer-default;
+}
+
+.home-content-panel:focus::after,
+.home-content-panel:hover::after {
+  @include mq('hover-pc') {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.home-content-panel__image {
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+.home-content-panel__image::before {
+  content: '';
+  display: block;
+  padding-top: 100%;
+}
+
+.home-content-panel__image>img {
+  height: 100%;
+  left: 0;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center center;
+  position: absolute;
+  top: 0;
+}
+
+.home-content-panel__title {
+  color: $color-white;
+  font-size: rem(20);
+  left: 0;
+  letter-spacing: math.div(2, 20) * 1em;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  z-index: $layer-up;
+
+  @include mq('md') {
+    font-size: rem(25);
+    letter-spacing: math.div(2, 25) * 1em;
+  }
+}

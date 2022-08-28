@@ -1,0 +1,61 @@
+@use "global" as *;
+@use "sass:color";
+
+.p-header {
+  background-color: color.adjust($color-main, $alpha: -0.5);
+  transition: background-color $duration;
+}
+
+.p-header.is-colored {
+  background-color: color.adjust($color-main, $alpha: 0);
+}
+
+.p-header__container {
+  height: inherit;
+  max-width: 100%;
+  padding: 0 rem(12) 0 rem(22);
+  width: 100%;
+
+  @include mq('md') {
+    max-width: 100%;
+    padding: 0 0 0 rem(32);
+  }
+}
+
+.p-header__inner {
+  align-items: center;
+  display: flex;
+  height: inherit;
+}
+
+.p-header__logo {
+  width: rem(70);
+  z-index: $layer-hamburger;
+}
+
+.p-header__title {
+  font-size: rem(16);
+  font-weight: $bold;
+  z-index: $layer-hamburger;
+}
+
+.p-header__nav {
+  height: inherit;
+  margin-left: auto;
+}
+
+.p-header__hamburger {
+  height: rem(44);
+  margin-left: auto;
+  width: rem(44);
+  z-index: $layer-hamburger;
+}
+
+.p-header__drawer {
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: $layer-drawer;
+}

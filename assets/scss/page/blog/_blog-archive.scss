@@ -1,0 +1,18 @@
+@use "global" as *;
+
+.blog-archive__items {
+  column-gap: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: rem(24);
+
+  @include mq('md') {
+    column-gap: rem(24);
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: rem(48);
+  }
+}
+
+.blog-archive__item {
+  display: flex;
+}

@@ -1,0 +1,11 @@
+@use "global" as *;
+@use "sass:math";
+
+.c-main-section-title {
+  font-size: rem(20);
+  letter-spacing: math.div(2, 20) * 1em;
+
+  @include mq('md') {
+    font-size: rem(30);
+  }
+}

@@ -1,0 +1,51 @@
+@use "global" as *;
+@use "sass:math";
+
+.p-article-nav__items {
+  display: flex;
+  padding-bottom: rem(28);
+  position: relative;
+}
+
+.p-article-nav__item {
+  font-size: rem(16);
+  letter-spacing: math.div(2, 16) * 1em;
+  line-height: 1;
+  position: absolute;
+  text-transform: uppercase;
+  top: 50%;
+}
+
+.p-article-nav__item--prev {
+  right: calc(50% + #{rem(83)});
+  transform: translateY(-50%);
+}
+
+.p-article-nav__item--center {
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.p-article-nav__item--next {
+  left: calc(50% + #{rem(83)});
+  transform: translateY(-50%);
+}
+
+.p-article-nav__item>a {
+  background-color: $color-main;
+  border: rem(1) solid $color-white;
+  color: $color-white;
+  display: block;
+  min-width: rem(70);
+  padding: rem(3) rem(9);
+  text-align: center;
+  transition: background-color $duration, color $duration;
+}
+
+.p-article-nav__item>a:focus,
+.p-article-nav__item>a:hover {
+  @include mq('hover-pc') {
+    background-color: $color-white;
+    color: $color-text02;
+  }
+}

@@ -1,0 +1,40 @@
+@use "global" as *;
+
+.overview-footer {
+  overflow: hidden;
+
+  @include mq('md') {
+    overflow: visible;
+  }
+}
+
+.overview-footer__map {
+  margin: 0 calc(50% - 50vw);
+  position: relative;
+  width: 100vw;
+
+  @include mq('md') {
+    margin: 0;
+    width: 100%;
+  }
+}
+
+.overview-footer__map::before {
+  content: '';
+  display: block;
+  @include paddingTopHack(375, 300);
+  
+  @include mq('md') {
+    @include paddingTopHack(1100, 367);
+  }
+}
+
+.overview-footer__map>iframe {
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  object-position: center center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}

@@ -1,0 +1,49 @@
+@use "global" as *;
+@use "sass:math";
+@use "sass:color";
+
+.sub-mv {
+  position: relative;
+}
+
+.sub-mv::after {
+  background-color: color.adjust($color-main, $alpha: -0.8);
+  content: '';
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.sub-mv__image {
+  height: 100%;
+  width: 100%;
+}
+
+.sub-mv__image>picture {
+  height: 100%;
+  width: 100%;
+}
+
+.sub-mv__image>picture>img {
+  height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.sub-mv__title {
+  display: flex;
+  font-size: rem(30);
+  justify-content: center;
+  left: 0;
+  letter-spacing: math.div(2, 30) * 1em;
+  padding: 0 rem(20);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  z-index: $layer-default;
+}

@@ -1,0 +1,81 @@
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.l-sub-mv {
+  height: 26.5625rem;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .l-sub-mv {
+    height: 23.125rem;
+  }
+}
+
+.sub-mv {
+  position: relative;
+}
+
+.sub-mv::after {
+  background-color: rgba(17, 17, 17, 0.2);
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.sub-mv__image {
+  height: 100%;
+  width: 100%;
+}
+
+.sub-mv__image > picture {
+  height: 100%;
+  width: 100%;
+}
+
+.sub-mv__image > picture > img {
+  -o-object-fit: cover;
+  -o-object-position: center center;
+  height: 100%;
+  max-width: 100%;
+     object-fit: cover;
+     object-position: center center;
+}
+
+.sub-mv__title {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+  -webkit-transform: translateY(-50%);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.875rem;
+          justify-content: center;
+  left: 0;
+  letter-spacing: 0.0666666667em;
+  padding: 0 1.25rem;
+  position: absolute;
+  top: 50%;
+          transform: translateY(-50%);
+  width: 100%;
+  z-index: 1;
+}
+/*# sourceMappingURL=sub.css.map */

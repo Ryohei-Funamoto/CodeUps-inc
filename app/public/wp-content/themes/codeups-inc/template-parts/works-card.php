@@ -1,0 +1,16 @@
+<a href="<?php the_permalink(); ?>" class="works-card">
+  <div class="works-card__head">
+    <figure class="works-card__image">
+      <?php if (has_post_thumbnail()) : ?>
+        <?php the_post_thumbnail('large'); ?>
+      <?php else : ?>
+        <img src="<?php echo esc_url(get_template_directory_uri() . '/img/common/noimg.png'); ?>" alt="">
+      <?php endif; ?>
+    </figure><!-- /.works-card__image -->
+    <div class="works-card__category"><?php my_the_post_term($args['anchor'], $args['id'], $args['tax']); ?></div>
+  </div><!-- /.works-card__head -->
+
+  <div class="works-card__body">
+    <h3 class="works-card__title"><?php the_title(); ?></h3>
+  </div><!-- /.works-card__body -->
+</a><!-- /.works-card -->

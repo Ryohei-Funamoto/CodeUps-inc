@@ -1,0 +1,32 @@
+@use "global" as *;
+
+.home-news__container {
+  @include mq('md') {
+    max-width: rem(1040);
+  }
+}
+
+.home-news__inner {
+  @include mq('md') {
+    display: flex;
+  }
+}
+
+.home-news__items {
+  @include mq('md') {
+    width: calc(100% - #{rem(160)});
+  }
+}
+
+.home-news__button {
+  margin-top: rem(28);
+  text-align: center;
+
+  @include mq('md') {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: rem(22);
+    margin-top: 0;
+    width: rem(160);
+  }
+}

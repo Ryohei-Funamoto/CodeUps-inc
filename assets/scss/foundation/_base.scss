@@ -1,0 +1,81 @@
+@use "global" as *;
+
+// モバイルファースト用
+html {
+
+  // ~375px
+  @media (max-width: 375px) {
+    font-size: vw(375, 16);
+  }
+
+  // 375px ~ 767px
+  font-size: 16px;
+
+  // 768px ~ inner
+  @include mq('md') {
+    font-size: vw(strip-unit($l-lg), 16);
+  }
+
+  // 992px ~ inner
+  @include mq('lg') {
+    font-size: vw(strip-unit($l-container-pc), 16);
+  }
+
+  // inner ~
+  @include mq('container') {
+    font-size: 16px;
+  }
+}
+
+// PCファースト用
+// html {
+  // inner ~
+  // font-size: 16px;
+
+  // 768px ~ inner
+  // @include mq('inner') {
+  //   font-size: vw(strip-unit($inner-pc), 16);
+  // }
+
+  // 375px ~ 767px
+  // @include mq('md') {
+  //   font-size: 16px;
+  // }
+
+  // ~ 375px
+  // @include mq('xs') {
+  //   font-size: vw(375, 16);
+  // }
+// }
+
+body {
+  background-color: $color-main;
+  color: $color-text;
+  display: flex;
+  flex-direction: column;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: $font-weight-base;
+  line-height: $line-height-base;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+  overflow-wrap: break-word;
+}
+
+
+/* pcの電話番号発信対応 */
+a[href^="tel:"] {
+
+  // モバイルファースト用
+  @include mq('md') {
+    pointer-events: none;
+  }
+
+  // PCファースト用
+  // pointer-events: none;
+  // @include max-screen(screen-size('md-less')) {
+  //   pointer-events: auto;
+  // }
+}

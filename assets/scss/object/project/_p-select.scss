@@ -1,0 +1,53 @@
+@use "global" as *;
+
+/* セレクトボックスの独自スタイル */
+.p-select {
+  display: block;
+}
+
+.p-select>span {
+  position: relative;
+}
+
+/* セレクトボックスの右端にグレーの背景 */
+.p-select>span::before {
+  background-color: #DDDDDD;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: calc(100% - 2px);
+  margin: auto;
+  pointer-events: none; /* グレーの背景の上もクリック可能にする */
+  position: absolute;
+  right: 1px;
+  top: 0;
+  width: 30px;
+}
+
+/* セレクトボックスの右端に矢印 */
+.p-select>span::after {
+  border-bottom: 2px solid #444444;
+  border-left: 2px solid #444444;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 8px;
+  margin: auto;
+  pointer-events: none; /* 矢印の上もクリック可能にする */
+  position: absolute;
+  right: 12px;
+  top: 0;
+  transform: rotate(-45deg);
+  width: 8px;
+}
+
+.p-select select {
+  background-color: #FFFFFF;
+  color: $color-text02;
+  font-size: rem(14);
+  padding: rem(11) rem(32) rem(11) rem(9);
+}
+
+.p-select select[aria-invalid="true"] {
+  background-color: $color-bg-danger;
+}
