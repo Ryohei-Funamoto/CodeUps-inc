@@ -46,6 +46,10 @@ function my_script_init()
   if (is_page(array('contact', 'contact-thanks'))) {
     wp_enqueue_style('contact-style', get_template_directory_uri() . '/css/contact.css', array(), date('YmdGis', filemtime(get_theme_file_path('/css/contact.css'))));
   }
+  /** 404.css */
+  if (is_404()) {
+    wp_enqueue_style('page-404-style', get_template_directory_uri() . '/css/page-404.css', array(), date('YmdGis', filemtime(get_theme_file_path('/css/page-404.css'))));
+  }
   /** jQuery */
   if (!is_admin()) {
     wp_deregister_script('jquery');

@@ -1,0 +1,59 @@
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.l-page-404 {
+  margin-top: 8.125rem;
+  padding-bottom: 7.5rem;
+}
+@media screen and (min-width: 768px) {
+  .l-page-404 {
+    margin-top: 12.5rem;
+    padding-bottom: 9.375rem;
+  }
+}
+
+.page-404__title {
+  color: rgba(255, 234, 46, 0.3);
+  font-size: 2.5rem;
+  letter-spacing: 0.05em;
+  text-align: center;
+  text-transform: capitalize;
+}
+@media screen and (min-width: 768px) {
+  .page-404__title {
+    font-size: 3.75rem;
+    letter-spacing: 0.0333333333em;
+  }
+}
+
+.page-404__lead {
+  font-size: 1.25rem;
+  letter-spacing: 0.1em;
+  margin-top: 5rem;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .page-404__lead {
+    font-size: 1.875rem;
+    letter-spacing: 0.0666666667em;
+  }
+}
+
+.page-404__button {
+  margin-top: 5rem;
+  text-align: center;
+}
+/*# sourceMappingURL=page-404.css.map */

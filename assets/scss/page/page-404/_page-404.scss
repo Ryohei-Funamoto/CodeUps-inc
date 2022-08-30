@@ -1,0 +1,33 @@
+@use "global" as *;
+@use "sass:math";
+@use "sass:color";
+
+.page-404__title {
+  color: color.adjust($color-main-accent02, $alpha: -0.7);
+  font-size: rem(40);
+  letter-spacing: math.div(2, 40) * 1em;
+  text-align: center;
+  text-transform: capitalize;
+  
+  @include mq('md') {
+    font-size: rem(60);
+    letter-spacing: math.div(2, 60) * 1em;
+  }
+}
+
+.page-404__lead {
+  font-size: rem(20);
+  letter-spacing: math.div(2, 20) * 1em;
+  margin-top: rem(80);
+  text-align: center;
+  
+  @include mq('md') {
+    font-size: rem(30);
+    letter-spacing: math.div(2, 30) * 1em;
+  }
+}
+
+.page-404__button {
+  margin-top: rem(80);
+  text-align: center;
+}

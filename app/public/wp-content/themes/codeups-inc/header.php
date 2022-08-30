@@ -11,31 +11,16 @@ global $u_contact; // お問い合わせ
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 
-<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+<head>
   <meta charset="<?php bloginfo('charset'); ?>">
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="format-detection" content="telephone=no">
-  <!-- SEO系 -->
-  <meta name="description" content="120文字以内">
-  <meta name="keywords" content="必要に応じて記述する" />
-  <!-- OGP -->
-  <meta property="og:title" content="このページのタイトル/ページごとのタイトルにする">
-  <meta property="og:site_name" content="サイト名">
-  <meta property="og:description" content="90文字くらい推奨">
-  <meta property="og:type" content="TOPページはwebsite、子ページはarticle">
-  <meta property="og:url" content="このページのURL">
-  <meta property="og:image" content="1200×630以上推奨、絶対パス">
-  <meta name="twitter:card" content="summary or summary_large_image">
-  <meta name="twitter:site" content="@ユーザー名">
   <meta name="format-detection" content="telephone=no">
   <!-- タッチアイコン -->
   <link rel="apple-touch-icon" sizes="192x192" href="">
   <link rel="shortcut icon" sizes="192x192" href="">
   <!-- ファビコン -->
   <link rel="icon" href="" />
-  <!-- クローラー -->
-  <meta name="robots" content="noindex">
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

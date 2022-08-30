@@ -825,6 +825,11 @@ picture {
     opacity: 1;
   }
 }
+html,
+body {
+  min-height: 100vh;
+}
+
 html {
   font-size: 16px;
 }
@@ -862,13 +867,13 @@ body {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  display: flex;
           flex-direction: column;
+  flex-direction: column;
   font-family: "Noto Sans JP", "Helvetica Neue", "Helvetica", "Arial", "Lato", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
-  min-height: 100vh;
-  min-height: -webkit-fill-available;
   overflow-wrap: break-word;
 }
 
