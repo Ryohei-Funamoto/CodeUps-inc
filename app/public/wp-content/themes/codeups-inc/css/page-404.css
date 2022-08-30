@@ -14,14 +14,21 @@
     opacity: 1;
   }
 }
-.l-page-404 {
-  margin-top: 8.125rem;
+.l-page-404-content {
   padding-bottom: 7.5rem;
 }
 @media screen and (min-width: 768px) {
-  .l-page-404 {
-    margin-top: 12.5rem;
+  .l-page-404-content {
     padding-bottom: 9.375rem;
+  }
+}
+
+.l-page-404__content {
+  margin-top: 8.125rem;
+}
+@media screen and (min-width: 768px) {
+  .l-page-404__content {
+    margin-top: 12.5rem;
   }
 }
 

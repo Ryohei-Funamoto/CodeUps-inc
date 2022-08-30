@@ -1,0 +1,9 @@
+@use "global" as *;
+
+.l-page-404-content {
+  padding-bottom: rem(120);
+
+  @include mq('md') {
+    padding-bottom: rem(150);
+  }
+}
