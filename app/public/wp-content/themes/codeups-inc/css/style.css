@@ -2024,15 +2024,15 @@ input[type=submit].c-button--submit:not(:disabled):hover {
 }
 
 .p-gnav__items .sub-menu {
-  -webkit-transform: scaleY(0);
+  -webkit-transform: translateX(-50%) scaleY(0);
   -webkit-transform-origin: center top;
   -webkit-transition: -webkit-transform 0.3s;
   background-color: #3D3D3D;
-  left: 0;
+  left: 50%;
   padding: 1.25rem 0.625rem;
   position: absolute;
   top: 100%;
-          transform: scaleY(0);
+          transform: translateX(-50%) scaleY(0);
           transform-origin: center top;
   transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
@@ -2042,13 +2042,14 @@ input[type=submit].c-button--submit:not(:disabled):hover {
 
 @media (hover: hover) and (pointer: fine) {
   .p-gnav__items > li:hover .sub-menu {
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
+    -webkit-transform: translateX(-50%) scaleY(1);
+            transform: translateX(-50%) scaleY(1);
   }
 }
 
 .p-gnav__items .sub-menu > li {
   font-size: 1rem;
+  text-align: center;
 }
 
 .p-gnav__items .sub-menu > li > a {

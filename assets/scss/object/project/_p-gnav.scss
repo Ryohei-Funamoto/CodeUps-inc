@@ -138,12 +138,12 @@
 
 .p-gnav__items .sub-menu {
   background-color: $color-bg02;
-  left: 0;
+  left: 50%;
   // opacity: 0;
   padding: rem(20) rem(10);
   position: absolute;
   top: 100%;
-  transform: scaleY(0);
+  transform: translateX(-50%) scaleY(0);
   transform-origin: center top;
   transition: transform $duration;
   // visibility: hidden;
@@ -152,7 +152,7 @@
 
 .p-gnav__items>li:hover .sub-menu {
   @include mq('hover-pc') {
-    transform: scaleY(1);
+    transform: translateX(-50%) scaleY(1);
     // visibility: visible;
     // opacity: 1;
   }
@@ -160,6 +160,7 @@
 
 .p-gnav__items .sub-menu>li {
   font-size: rem(16);
+  text-align: center;
 }
 
 .p-gnav__items .sub-menu>li>a {
