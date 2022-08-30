@@ -3,7 +3,7 @@
 /** Contact Form7の送信ボタンをクリックした後の遷移先設定 */
 function add_origin_thanks_page()
 {
-  $thanks = esc_url(home_url('/contact_thanks/'));
+  $thanks = esc_url(home_url('/contact/contact_thanks/'));
   echo <<< EOC
     <script>
       var thanksPage = {
