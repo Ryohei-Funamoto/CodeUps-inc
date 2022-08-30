@@ -2461,14 +2461,11 @@ input[type=submit].c-button--submit:not(:disabled):hover {
 /* セレクトボックスの独自スタイル */
 .p-select {
   display: block;
-}
-
-.p-select > span {
   position: relative;
 }
 
 /* セレクトボックスの右端にグレーの背景 */
-.p-select > span::before {
+.p-select::before {
   background-color: #DDDDDD;
   bottom: 0;
   content: "";
@@ -2480,10 +2477,11 @@ input[type=submit].c-button--submit:not(:disabled):hover {
   right: 1px;
   top: 0;
   width: 30px;
+  z-index: 1;
 }
 
 /* セレクトボックスの右端に矢印 */
-.p-select > span::after {
+.p-select::after {
   -webkit-transform: rotate(-45deg);
   border-bottom: 2px solid #444444;
   border-left: 2px solid #444444;
@@ -2498,6 +2496,7 @@ input[type=submit].c-button--submit:not(:disabled):hover {
   top: 0;
           transform: rotate(-45deg);
   width: 8px;
+  z-index: 1;
 }
 
 .p-select select {
