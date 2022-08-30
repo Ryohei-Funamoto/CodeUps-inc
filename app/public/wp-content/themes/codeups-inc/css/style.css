@@ -2224,7 +2224,7 @@ input[type=submit].c-button--submit:not(:disabled):hover {
   }
 }
 
-.p-input-group__radio {
+.p-input-group__field--radio {
   margin-bottom: -1rem;
 }
 
