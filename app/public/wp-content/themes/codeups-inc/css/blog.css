@@ -14,15 +14,6 @@
     opacity: 1;
   }
 }
-.l-blog {
-  padding-bottom: 7.5rem;
-}
-@media screen and (min-width: 768px) {
-  .l-blog {
-    padding-bottom: 9.375rem;
-  }
-}
-
 .l-blog__archive {
   margin-top: 2.25rem;
 }

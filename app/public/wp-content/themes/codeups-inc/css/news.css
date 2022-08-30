@@ -14,15 +14,6 @@
     opacity: 1;
   }
 }
-.l-news {
-  padding-bottom: 7.5rem;
-}
-@media screen and (min-width: 768px) {
-  .l-news {
-    padding-bottom: 9.375rem;
-  }
-}
-
 .l-news__archive {
   margin-top: 5.3125rem;
 }

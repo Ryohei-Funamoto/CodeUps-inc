@@ -14,15 +14,6 @@
     opacity: 1;
   }
 }
-.l-overview {
-  padding-bottom: 7.5rem;
-}
-@media screen and (min-width: 768px) {
-  .l-overview {
-    padding-bottom: 9.375rem;
-  }
-}
-
 .l-overview__info {
   margin-top: 5.3125rem;
 }

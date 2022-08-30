@@ -14,30 +14,12 @@
     opacity: 1;
   }
 }
-.l-works-single {
-  padding: 3.125rem 0 7.5rem;
-}
-@media screen and (min-width: 768px) {
-  .l-works-single {
-    padding: 3.125rem 0 9.375rem;
-  }
-}
-
 .l-works-single__article {
   margin-top: 3.3125rem;
 }
 @media screen and (min-width: 768px) {
   .l-works-single__article {
     margin-top: 5.6875rem;
-  }
-}
-
-.l-works {
-  padding-bottom: 7.5rem;
-}
-@media screen and (min-width: 768px) {
-  .l-works {
-    padding-bottom: 9.375rem;
   }
 }
 

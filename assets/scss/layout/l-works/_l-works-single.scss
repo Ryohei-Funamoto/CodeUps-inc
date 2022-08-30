@@ -1,13 +1,5 @@
 @use "global" as *;
 
-.l-works-single {
-  padding: rem(50) 0 rem(120);
-
-  @include mq('md') {
-    padding: rem(50) 0 rem(150);
-  }
-}
-
 .l-works-single__article {
   margin-top: rem(53);
 

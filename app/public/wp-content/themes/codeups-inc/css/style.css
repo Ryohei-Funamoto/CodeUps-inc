@@ -1068,6 +1068,10 @@ input:-webkit-autofill {
   margin-top: 1rem;
 }
 
+.single .l-breadcrumb {
+  margin-top: 4.125rem;
+}
+
 .l-container {
   margin: 0 auto;
   max-width: 38.75rem;
@@ -1082,10 +1086,12 @@ input:-webkit-autofill {
 }
 
 .l-footer-contact {
+  margin-top: 7.5rem;
   padding: 2rem 0 4rem;
 }
 @media screen and (min-width: 768px) {
   .l-footer-contact {
+    margin-top: 9.375rem;
     padding: 3.75rem 0 9.375rem;
   }
 }

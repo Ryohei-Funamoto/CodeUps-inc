@@ -1,13 +1,5 @@
 @use "global" as *;
 
-.l-overview {
-  padding-bottom: rem(120);
-
-  @include mq('md') {
-    padding-bottom: rem(150);
-  }
-}
-
 .l-overview__info {
   margin-top: rem(85);
 
