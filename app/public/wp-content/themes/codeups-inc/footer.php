@@ -9,7 +9,7 @@ global $u_contact; // お問い合わせ
 ?>
 
 <?php
-if (!is_page(array('contact', 'contact-thanks')) && !is_404()) {
+if (!is_page(array('contact', 'contact_thanks')) && !is_404()) {
   get_template_part('template-parts/footer-contact');
 }
 ?>

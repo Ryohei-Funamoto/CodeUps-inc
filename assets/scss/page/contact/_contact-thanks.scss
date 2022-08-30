@@ -1,0 +1,30 @@
+@use "global" as *;
+@use "sass:math";
+
+.contact-thanks__title {
+  font-size: rem(20);
+  letter-spacing: math.div(2, 20) * 1em;
+  text-align: center;
+
+  @include mq('md') {
+    font-size: rem(30);
+    letter-spacing: math.div(2, 30) * 1em;
+  }
+}
+
+.contact-thanks__lead {
+  font-size: rem(20);
+  letter-spacing: math.div(2, 20) * 1em;
+  margin-top: rem(80);
+  text-align: center;
+  
+  @include mq('md') {
+    font-size: rem(30);
+    letter-spacing: math.div(2, 30) * 1em;
+  }
+}
+
+.contact-thanks__button {
+  margin-top: rem(80);
+  text-align: center;
+}

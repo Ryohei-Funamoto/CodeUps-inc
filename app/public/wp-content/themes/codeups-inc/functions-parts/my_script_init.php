@@ -43,7 +43,7 @@ function my_script_init()
     wp_enqueue_style('single-style', get_template_directory_uri() . '/css/single.css', array(), date('YmdGis', filemtime(get_theme_file_path('/css/single.css'))));
   }
   /** contact.css */
-  if (is_page(array('contact', 'contact-thanks'))) {
+  if (is_page(array('contact', 'contact_thanks'))) {
     wp_enqueue_style('contact-style', get_template_directory_uri() . '/css/contact.css', array(), date('YmdGis', filemtime(get_theme_file_path('/css/contact.css'))));
   }
   /** 404.css */

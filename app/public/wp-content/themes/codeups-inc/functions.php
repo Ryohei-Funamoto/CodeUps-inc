@@ -6,6 +6,8 @@ require_once get_theme_file_path('/functions-parts/add_additional_class_on_a.php
 // require_once get_theme_file_path('/functions-parts/add_additional_class_on_li.php');
 /** カスタムメニューにサブタイトルを付与 */
 require_once get_theme_file_path('/functions-parts/add_attribute_to_nav_menu.php');
+/** Contact Form7の送信ボタンをクリックした後の遷移先設定 */
+require_once get_theme_file_path('/functions-parts/add_origin_thanks_page.php');
 /** 新着記事のサブクエリ */
 require_once get_theme_file_path('/functions-parts/latest_sub_query.php');
 /** メニューの登録 */

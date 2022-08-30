@@ -30,7 +30,7 @@ global $u_contact; // お問い合わせ
 <body <?php body_class(); ?>>
   <?php wp_body_open(); ?>
 
-  <header class="<?php if (is_singular(array('post', 'works', 'blog', 'contact-thanks')) || is_404()) {
+  <header class="<?php if (is_singular(array('post', 'works', 'blog')) || is_page('contact-thanks') || is_404()) {
                     echo 'l-header p-header is-colored';
                   } else {
                     echo 'l-header p-header js-header';
