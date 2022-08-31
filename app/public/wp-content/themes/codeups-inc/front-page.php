@@ -255,6 +255,7 @@
             <li class="home-blog__item">
               <?php
               $args = array(
+                'class' => 'p-blog-card',
                 'anchor' => false,
                 'id' => $post->ID,
                 'tax' => 'blog_genre',

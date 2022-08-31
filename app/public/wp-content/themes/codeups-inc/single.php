@@ -67,6 +67,7 @@
             <li class="p-related-posts__item">
               <?php
               $args = array(
+                'class' => 'p-blog-card p-blog-card--no-description',
                 'anchor' => false,
                 'id' => $post->ID,
               );

@@ -6,6 +6,7 @@
   display: flex;
   flex-direction: column;
   transition: background-color $duration;
+  width: 100%;
 }
 
 .p-blog-card:focus,
@@ -79,6 +80,10 @@
   @include lineHeight(14, 26);
   margin-top: rem(12);
   transition: color $duration;
+}
+
+.p-blog-card--no-description .p-blog-card__description {
+  display: none;
 }
 
 .p-blog-card:focus .p-blog-card__description,

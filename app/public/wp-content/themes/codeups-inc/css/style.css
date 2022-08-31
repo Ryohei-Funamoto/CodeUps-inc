@@ -1414,6 +1414,7 @@ input[type=submit].c-button--submit:not(:disabled):hover {
   display: flex;
           flex-direction: column;
   transition: background-color 0.3s;
+  width: 100%;
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -1497,6 +1498,10 @@ input[type=submit].c-button--submit:not(:disabled):hover {
   line-height: 1.8571428571;
   margin-top: 0.75rem;
   transition: color 0.3s;
+}
+
+.p-blog-card--no-description .p-blog-card__description {
+  display: none;
 }
 
 @media (hover: hover) and (pointer: fine) {
