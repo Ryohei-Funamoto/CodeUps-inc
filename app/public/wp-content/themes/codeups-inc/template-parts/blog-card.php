@@ -10,8 +10,26 @@
   </div><!-- /.p-blog-card__head -->
 
   <div class="p-blog-card__body">
-    <h3 class="p-blog-card__title"><?php the_title(); ?></h3>
-    <p class="p-blog-card__description"><?php echo get_the_excerpt(); ?></p>
+    <h3 class="p-blog-card__title">
+      <?php
+      if (mb_strlen($post->post_title, 'UTF-8') > 20) {
+        $title = mb_substr($post->post_title, 0, 20, 'UTF-8');
+        echo $title . '…';
+      } else {
+        echo $post->post_title;
+      }
+      ?>
+    </h3>
+    <p class="p-blog-card__description">
+      <?php
+      if (mb_strlen($post->post_content, 'UTF-8') > 80) {
+        $content = mb_substr(strip_tags($post->post_content), 0, 80, 'UTF-8');
+        echo $content . '…';
+      } else {
+        echo strip_tags($post->post_content);
+      }
+      ?>
+    </p>
   </div><!-- /.p-blog-card__body -->
 
   <div class="p-blog-card__footer">
