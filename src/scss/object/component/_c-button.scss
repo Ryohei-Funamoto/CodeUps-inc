@@ -2,7 +2,7 @@
 @use "sass:math";
 
 .c-button {
-  background-color: $color-bg;
+  background-color: $color-bg02;
   border: rem(1) solid $color-white;
   color: $color-white;
   display: inline-block;
@@ -72,7 +72,7 @@
 }
 
 .c-button--home-news::after {
-  background-color: $color-bg;
+  background-color: $color-bg02;
   content: '';
   display: block;
   height: 100%;
@@ -103,7 +103,7 @@ input[type="submit"].c-button--submit {
 input[type="submit"].c-button--submit:not(:disabled):focus,
 input[type="submit"].c-button--submit:not(:disabled):hover {
   @include mq('hover-pc') {
-    background-color: $color-bg;
+    background-color: $color-bg02;
     color: $color-text;
   }
 }

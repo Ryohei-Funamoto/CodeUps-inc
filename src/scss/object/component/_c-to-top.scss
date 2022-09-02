@@ -19,13 +19,13 @@
 .c-to-top:focus,
 .c-to-top:hover {
   @include mq('hover-pc') {
-    background-color: $color-bg;
+    background-color: $color-bg02;
   }
 }
 
 .c-to-top::before {
-  border-left: rem(3) solid $color-bg;
-  border-top: rem(3) solid $color-bg;
+  border-left: rem(3) solid $color-bg02;
+  border-top: rem(3) solid $color-bg02;
   content: '';
   display: block;
   height: rem(12);

@@ -12,7 +12,7 @@
 .p-blog-card:focus,
 .p-blog-card:hover {
   @include mq('hover-pc') {
-    background-color: $color-bg;
+    background-color: $color-bg02;
   }
 }
 

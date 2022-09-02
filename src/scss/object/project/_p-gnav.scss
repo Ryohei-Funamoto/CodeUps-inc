@@ -77,7 +77,7 @@
 }
 
 .p-gnav__items>li:last-child>a::after {
-  background-color: $color-bg;
+  background-color: $color-bg02;
   content: '';
   display: block;
   height: 100%;
@@ -137,7 +137,7 @@
 // }
 
 .p-gnav__items .sub-menu {
-  background-color: $color-bg02;
+  background-color: $color-bg03;
   left: 50%;
   // opacity: 0;
   padding: rem(20) rem(10);

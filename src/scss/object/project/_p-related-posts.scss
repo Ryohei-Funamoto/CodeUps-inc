@@ -2,7 +2,7 @@
 @use "sass:math";
 
 .p-related-posts__title {
-  background-color: $color-bg;
+  background-color: $color-bg02;
   border: rem(1) solid $color-white;
   font-size: rem(16);
   letter-spacing: math.div(2, 16) * 1em;
