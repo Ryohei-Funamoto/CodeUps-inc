@@ -16,6 +16,7 @@
 
 .content-media__head {
   margin: 0 calc(50% - 50vw);
+  position: relative;
   width: 100vw;
 
   @include mq('md') {
@@ -87,4 +88,13 @@
     @include lineHeight(16, 35);
     margin-top: rem(40);
   }
+}
+
+.content-media__extend-bg {
+  background-color: $color-bg;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }

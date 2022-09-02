@@ -52,6 +52,7 @@
 
 .content-media__head {
   margin: 0 calc(50% - 50vw);
+  position: relative;
   width: 100vw;
 }
 @media screen and (min-width: 768px) {
@@ -129,6 +130,15 @@
     line-height: 2.1875;
     margin-top: 2.5rem;
   }
+}
+
+.content-media__extend-bg {
+  background-color: #333333;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 
 .content-sub-mission__item:nth-child(n+2) {
