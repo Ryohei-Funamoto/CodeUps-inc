@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
       trigger: '.js-top-mission',
       start: '0% 50%'
     },
-    duration: 1.5
+    duration: 1.0
   });
 
   gsap.utils.toArray('.js-content-media').forEach(elm => {
@@ -47,13 +47,13 @@ document.addEventListener('DOMContentLoaded', function () {
           y: 0
         }
       },
-      duration: 1.5
+      duration: 1.0
     }).to(mediaImgWraps, {
       keyframes: {
         '0%': { autoAlpha: 0 },
         '100%': { autoAlpha: 1 }
       },
-      duration: 1.5
+      duration: 1.0
     }, '<').to(mediaExtendBg, {
       keyframes: {
         '0%': {
@@ -72,13 +72,13 @@ document.addEventListener('DOMContentLoaded', function () {
           transformOrigin: 'right'
         }
       },
-      duration: 1.5
+      duration: 1.0
     }, '<').to(mediaImg, {
       keyframes: {
         '0%': { autoAlpha: 0 },
         '100%': { autoAlpha: 1 }
       },
-      duration: 1.5
+      duration: 1.0
     }, '<0.5');
 
     ScrollTrigger.create({
