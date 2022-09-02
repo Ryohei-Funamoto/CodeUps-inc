@@ -12,12 +12,15 @@ global $u_contact; // お問い合わせ
   <div class="l-container p-footer-contact__container">
     <?php
     $args = array(
-      'block' => 'p-footer-contact',
+      'wrapper-class' => 'p-footer-contact__title-wrapper',
+      'sub-class' => 'p-footer-contact__sub-title',
       'en-ttl' => 'contact',
+      'main-class' => 'p-footer-contact__main-title',
       'ja-ttl' => 'お問い合わせ',
     );
     get_template_part('template-parts/section-title', null, $args);
     ?>
+
     <p class="p-footer-contact__description">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
     <div class="p-footer-contact__button">
       <a href="<?php echo $u_contact; ?>" class="c-button">お問い合わせへ</a>

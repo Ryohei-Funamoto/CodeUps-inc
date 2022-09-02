@@ -1,5 +1,9 @@
 @use "global" as *;
 
+.home-news {
+  overflow: hidden;
+}
+
 .home-news__container {
   @include mq('md') {
     max-width: rem(1040);

@@ -54,7 +54,7 @@
         ?>
           <ul class="home-news__items">
             <?php while ($news_query->have_posts()) : $news_query->the_post(); ?>
-              <li class="home-news__item">
+              <li class="home-news__item js-home-news">
                 <?php
                 $args = array(
                   'anchor' => false,
@@ -78,23 +78,27 @@
     </div><!-- /.l-container home-news__container -->
   </div><!-- /.l-home__news l-home-news home-news -->
 
-  <div class="home-diagonal-line">
-    <div class="home-diagonal-line__body home-diagonal-line__body--downward"></div>
+  <div class="home-diagonal-line home-diagonal-line--downward">
+    <div class="home-diagonal-line__body">
+      <div class="home-diagonal-line__extend-color js-diagonal-line-downward"></div>
+    </div><!-- /.home-diagonal-line__body -->
   </div><!-- /.home-diagonal-line -->
 
   <section class="l-home__content l-home-content home-content">
     <div class="l-container home-content__container">
       <?php
       $args = array(
-        'block' => 'home-content',
+        'wrapper-class' => 'home-content__title-wrapper',
+        'sub-class' => 'home-content__sub-title js-sub-title-fade-right',
         'en-ttl' => 'content',
+        'main-class' => 'home-content__main-title js-main-title',
         'ja-ttl' => '事業内容',
       );
       get_template_part('template-parts/section-title', null, $args);
       ?>
 
-      <ul class="home-content__items">
-        <li class="home-content__item">
+      <ul class="home-content__items js-home-content-panel-trigger">
+        <li class="home-content__item js-home-content-panel">
           <a href="<?php echo $u_content; ?>" class="home-content-panel">
             <div class="home-content-panel__image">
               <img src="<?php echo esc_url(get_template_directory_uri() . '/img/home/home_content_1.jpg'); ?>" alt="経営理念ページへ">
@@ -103,7 +107,7 @@
           </a><!-- /.home-content-panel -->
         </li><!-- /.home-content__item -->
 
-        <li class="home-content__item">
+        <li class="home-content__item js-home-content-panel">
           <a href="<?php echo $u_content; ?>#mission-1" class="home-content-panel">
             <div class="home-content-panel__image">
               <img src="<?php echo esc_url(get_template_directory_uri() . '/img/home/home_content_2.jpg'); ?>" alt="理念1へ">
@@ -112,7 +116,7 @@
           </a><!-- /.home-content-panel -->
         </li><!-- /.home-content__item -->
 
-        <li class="home-content__item">
+        <li class="home-content__item js-home-content-panel">
           <a href="<?php echo $u_content; ?>#mission-2" class="home-content-panel">
             <div class="home-content-panel__image">
               <img src="<?php echo esc_url(get_template_directory_uri() . '/img/home/home_content_3.jpg'); ?>" alt="理念2へ">
@@ -121,7 +125,7 @@
           </a><!-- /.home-content-panel -->
         </li><!-- /.home-content__item -->
 
-        <li class="home-content__item">
+        <li class="home-content__item js-home-content-panel">
           <a href="<?php echo $u_content; ?>#mission-3" class="home-content-panel">
             <div class="home-content-panel__image">
               <img src="<?php echo esc_url(get_template_directory_uri() . '/img/home/home_content_4.jpg'); ?>" alt="理念3へ">
@@ -137,19 +141,21 @@
     <div class="l-container home-works__container">
       <?php
       $args = array(
-        'block' => 'home-works',
+        'wrapper-class' => 'home-works__title-wrapper',
+        'sub-class' => 'home-works__sub-title js-sub-title-fade-left',
         'en-ttl' => 'works',
+        'main-class' => 'home-works__main-title js-main-title',
         'ja-ttl' => '制作実績',
       );
       get_template_part('template-parts/section-title', null, $args);
       ?>
 
-      <div class="home-works__main-area">
+      <div class="home-works__main-area js-home-works-trigger">
         <?php
         $works_post = latest_sub_query('works', 3);
         if ($works_post->have_posts()) :
         ?>
-          <div class="home-works__media home-works-media">
+          <div class="home-works__media home-works-media js-home-works-media">
             <div class="home-works-media__head">
               <div class="home-works-media__image-slider-wrapper">
                 <div class="swiper home-works-media__image-slider home-works-image-slider js-home-works-image-slider">
@@ -196,27 +202,33 @@
         endif;
         wp_reset_postdata();
         ?>
+
+        <div class="home-works__extend-bg js-home-works-extend-bg"></div>
       </div><!-- /.home-works__main-area -->
     </div><!-- /.l-container home-works__container -->
   </section><!-- /.l-home__works l-home-works home-works -->
 
-  <div class="home-diagonal-line">
-    <div class="home-diagonal-line__body home-diagonal-line__body--upward"></div>
+  <div class="home-diagonal-line home-diagonal-line--upward">
+    <div class="home-diagonal-line__body">
+      <div class="home-diagonal-line__extend-color js-diagonal-line-upward"></div>
+    </div><!-- /.home-diagonal-line__body -->
   </div><!-- /.home-diagonal-line -->
 
   <section class="l-home__overview l-home-overview home-overview">
     <div class="l-container home-overview__container">
       <?php
       $args = array(
-        'block' => 'home-overview',
+        'wrapper-class' => 'home-overview__title-wrapper',
+        'sub-class' => 'home-overview__sub-title js-sub-title-fade-right',
         'en-ttl' => 'overview',
+        'main-class' => 'home-overview__main-title js-main-title',
         'ja-ttl' => '企業概要',
       );
       get_template_part('template-parts/section-title', null, $args);
       ?>
 
-      <div class="home-overview__main-area">
-        <div class="home-overview__media home-overview-media">
+      <div class="home-overview__main-area js-home-overview-trigger">
+        <div class="home-overview__media home-overview-media js-home-overview-media">
           <div class="home-overview-media__head">
             <figure class="home-overview-media__image">
               <img src="<?php echo esc_url(get_template_directory_uri() . '/img/home/home_overview.jpg'); ?>" alt="企業概要">
@@ -231,6 +243,8 @@
             </div><!-- /.home-overview-media__button -->
           </div><!-- /.home-overview-media__body -->
         </div><!-- /.home-overview__media home-overview-media -->
+
+        <div class="home-overview__extend-bg js-home-overview-extend-bg"></div>
       </div><!-- /.home-overview__main-area -->
     </div><!-- /.l-container home-overview__container -->
   </section><!-- /.l-home__overview l-home-overview home-overview -->
@@ -239,8 +253,10 @@
     <div class="l-container home-blog__container">
       <?php
       $args = array(
-        'block' => 'home-blog',
+        'wrapper-class' => 'home-blog__title-wrapper',
+        'sub-class' => 'home-blog__sub-title js-sub-title-fade-left',
         'en-ttl' => 'blog',
+        'main-class' => 'home-blog__main-title js-main-title',
         'ja-ttl' => 'ブログ',
       );
       get_template_part('template-parts/section-title', null, $args);
@@ -250,12 +266,11 @@
       $blog_post = latest_sub_query('blog', 3);
       if ($blog_post->have_posts()) :
       ?>
-        <ul class="home-blog__items">
+        <ul class="home-blog__items js-home-blog-cards">
           <?php while ($blog_post->have_posts()) : $blog_post->the_post(); ?>
-            <li class="home-blog__item">
+            <li class="home-blog__item js-home-blog-card">
               <?php
               $args = array(
-                'class' => 'p-blog-card',
                 'anchor' => false,
                 'id' => $post->ID,
                 'tax' => 'blog_genre',
@@ -270,7 +285,7 @@
       wp_reset_postdata();
       ?>
 
-      <div class="home-blog__button">
+      <div class="home-blog__button js-home-blog-button">
         <a href="<?php echo $u_blog; ?>" class="c-button">詳しく見る</a>
       </div><!-- /.home-blog__button -->
     </div><!-- /.home-blog__container -->

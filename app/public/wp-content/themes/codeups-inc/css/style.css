@@ -1278,6 +1278,10 @@ input[type=submit].c-button--submit:not(:disabled):hover {
   }
 }
 
+.c-main-section-title > span {
+  display: inline-block;
+}
+
 .c-sub-section-title {
   color: rgba(249, 248, 113, 0.2);
   font-family: "Noto Serif JP", serif;
