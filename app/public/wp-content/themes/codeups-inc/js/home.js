@@ -47,6 +47,9 @@ document.addEventListener('DOMContentLoaded', function () {
    */
   /** section-title */
   const subFadeRight = document.querySelectorAll('.js-sub-title-fade-right');
+  const subFadeLeft = document.querySelectorAll('.js-sub-title-fade-left');
+  const mainTitle = document.querySelectorAll('.js-main-title');
+
   subFadeRight.forEach(elm => {
     gsap.set(elm, {
       autoAlpha: 0,
@@ -59,11 +62,11 @@ document.addEventListener('DOMContentLoaded', function () {
         trigger: elm,
         start: '0% 50%',
         // scrub: true
-      }
+      },
+      duration: 1.0
     });
   });
 
-  const subFadeLeft = document.querySelectorAll('.js-sub-title-fade-left');
   subFadeLeft.forEach(elm => {
     gsap.set(elm, {
       autoAlpha: 0,
@@ -76,11 +79,12 @@ document.addEventListener('DOMContentLoaded', function () {
         trigger: elm,
         start: '0% 50%',
         // scrub: true
-      }
+      },
+      duration: 1.0
     });
   });
 
-  const mainTitle = document.querySelectorAll('.js-main-title');
+
   mainTitle.forEach(elm => {
     // 見出しタグ内のテキストを取得
     let content = elm.textContent;
@@ -99,6 +103,7 @@ document.addEventListener('DOMContentLoaded', function () {
       autoAlpha: 0,
       y: 100
     });
+
     gsap.to('.js-main-title span', {
       autoAlpha: 1,
       y: 0,
@@ -110,7 +115,8 @@ document.addEventListener('DOMContentLoaded', function () {
       stagger: {
         from: 'start',
         amount: 0.25
-      }
+      },
+      duration: 1.0
     });
   });
 
@@ -119,14 +125,16 @@ document.addEventListener('DOMContentLoaded', function () {
     autoAlpha: 0,
     x: 100
   });
+
   gsap.to('.js-home-news', {
     autoAlpha: 1,
     x: 0,
     scrollTrigger: {
       trigger: '.js-home-news',
       start: '0% 50%'
-    }
-  })
+    },
+    duration: 1.0
+  });
 
   /** Content */
   gsap.set('.js-home-content-panel', {
@@ -151,7 +159,8 @@ document.addEventListener('DOMContentLoaded', function () {
     stagger: {
       from: 'start',
       amount: 0.25
-    }
+    },
+    duration: 1.0
   });
 
   /** Works */
@@ -175,9 +184,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
   worksTl.to('.js-home-works-extend-bg', {
     autoAlpha: 1,
-    scaleX: 1
+    scaleX: 1,
+    duration: 1.0
   }).to('.js-home-works-media', {
-    autoAlpha: 1
+    autoAlpha: 1,
+    duration: 1.0
   });
 
   /** Overview */
@@ -201,9 +212,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
   overviewTl.to('.js-home-overview-extend-bg', {
     autoAlpha: 1,
-    scaleX: 1
+    scaleX: 1,
+    duration: 1.0
   }).to('.js-home-overview-media', {
-    autoAlpha: 1
+    autoAlpha: 1,
+    duration: 1.0
   });
 
   /** Blog */
@@ -225,7 +238,8 @@ document.addEventListener('DOMContentLoaded', function () {
         stagger: {
           from: 'start',
           amount: 0.25
-        }
+        },
+        duration: 1.0
       });
     },
     // 767px以下
@@ -242,7 +256,8 @@ document.addEventListener('DOMContentLoaded', function () {
             start: '0% 50%',
             // end: '100% 50%',
             // scrub: true
-          }
+          },
+          duration: 1.0
         });
       });
     }
@@ -258,7 +273,8 @@ document.addEventListener('DOMContentLoaded', function () {
       trigger: '.js-home-blog-button',
       start: '0% 50%',
       // scrub: true
-    }
+    },
+    duration: 1.0
   });
 
   /** diagonal-line */
