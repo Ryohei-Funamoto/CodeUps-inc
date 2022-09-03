@@ -2563,6 +2563,17 @@ input[type=submit].c-button--submit:not(:disabled):hover {
   }
 }
 
+.p-term-nav__item.is-active {
+  background-color: #FFFFFF;
+  color: #333333;
+  padding: 0.4375rem 0.5rem;
+}
+@media screen and (min-width: 768px) {
+  .p-term-nav__item.is-active {
+    padding: 0.4375rem 0.625rem;
+  }
+}
+
 .p-term-nav__item > a {
   -webkit-transition: background-color 0.5s, color 0.5s;
   background-color: #111111;
@@ -2575,11 +2586,6 @@ input[type=submit].c-button--submit:not(:disabled):hover {
   .p-term-nav__item > a {
     padding: 0.4375rem 0.625rem;
   }
-}
-
-.p-term-nav__item.is-active > a {
-  background-color: #FFFFFF;
-  color: #333333;
 }
 
 @media (hover: hover) and (pointer: fine) {

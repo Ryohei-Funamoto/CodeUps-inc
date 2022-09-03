@@ -30,6 +30,16 @@
   }
 }
 
+.p-term-nav__item.is-active {
+  background-color: $color-white;
+  color: $color-text02;
+  padding: rem(7) rem(8);
+
+  @include mq('md') {
+    padding: rem(7) rem(10);
+  }
+}
+
 .p-term-nav__item>a {
   background-color: $color-main;
   color: $color-text;
@@ -40,11 +50,6 @@
   @include mq('md') {
     padding: rem(7) rem(10);
   }
-}
-
-.p-term-nav__item.is-active>a {
-  background-color: $color-white;
-  color: $color-text02;
 }
 
 .p-term-nav__item>a:focus,
