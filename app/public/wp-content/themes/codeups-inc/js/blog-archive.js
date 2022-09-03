@@ -35,7 +35,7 @@ window.addEventListener('DOMContentLoaded', function () {
               once: true
             },
             duration: 1.0,
-            delay: 0.25
+            delay: 0.5
           });
         } else if ((i + 1) % 3 === 0) {
           gsap.fromTo(elm, {
@@ -50,7 +50,7 @@ window.addEventListener('DOMContentLoaded', function () {
               once: true
             },
             duration: 1.0,
-            delay: 0.5
+            delay: 1.0
           });
         }
       });
