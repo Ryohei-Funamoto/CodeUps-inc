@@ -62,12 +62,12 @@ function my_script_init()
     wp_enqueue_script('swiper-script', get_template_directory_uri() . '/js/lib/swiper-bundle.min.js', array(), '8.3.1', true);
   }
   /** gsap.min.js */
-  if (is_front_page() || is_page('content')) {
+  if (is_front_page() || is_page('content') || is_post_type_archive('works') || is_tax('works_genre')) {
     wp_enqueue_script('gsap-script', get_template_directory_uri() . '/js/lib/gsap.min.js', array(), '3.11.0', true);
   }
   /** ScrollTrigger.min.js */
-  if (is_front_page() || is_page('content')) {
-    wp_enqueue_script('scrolltrigger-script', get_template_directory_uri() . '/js/lib/ScrollTrigger.min.js', array(), '3.11.0', true);
+  if (is_front_page() || is_page('content') || is_post_type_archive('works') || is_tax('works_genre')) {
+    wp_enqueue_script('ScrollTrigger-script', get_template_directory_uri() . '/js/lib/ScrollTrigger.min.js', array(), '3.11.0', true);
   }
   /** common.js */
   wp_enqueue_script('common-script', get_template_directory_uri() . '/js/common.js', array('jquery'), date('YmdGis', filemtime(get_theme_file_path('/js/common.js'))), true);
@@ -83,9 +83,13 @@ function my_script_init()
   if (is_page('content')) {
     wp_enqueue_script('content-script', get_template_directory_uri() . '/js/content.js', array('jquery'), date('YmdGis', filemtime(get_theme_file_path('/js/content.js'))), true);
   }
-  /** works.js */
+  /** works-single.js */
   if (is_singular('works')) {
-    wp_enqueue_script('works-script', get_template_directory_uri() . '/js/works.js', array('jquery'), date('YmdGis', filemtime(get_theme_file_path('/js/works.js'))), true);
+    wp_enqueue_script('works-single-script', get_template_directory_uri() . '/js/works-single.js', array('jquery'), date('YmdGis', filemtime(get_theme_file_path('/js/works-single.js'))), true);
+  }
+  /** works-archive.js */
+  if (is_post_type_archive('works') || is_tax('works_genre')) {
+    wp_enqueue_script('works-archive-script', get_template_directory_uri() . '/js/works-archive.js', array('jquery'), date('YmdGis', filemtime(get_theme_file_path('/js/works-archive.js'))), true);
   }
 }
 add_action('wp_enqueue_scripts', 'my_script_init');

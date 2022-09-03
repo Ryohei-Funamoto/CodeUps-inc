@@ -29,7 +29,7 @@
       ?>
         <ul class="works-archive__items">
           <?php while (have_posts()) : the_post(); ?>
-            <li class="works-archive__item">
+            <li class="works-archive__item js-works-card">
               <?php
               $args = array(
                 'anchor' => false,
