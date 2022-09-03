@@ -1668,8 +1668,8 @@ input[type=submit].c-button--submit:not(:disabled):hover {
 .p-checkbox input[type=checkbox] + span::after {
   -webkit-transform: rotate(-45deg);
   -webkit-transition: opacity 0.3s, visibility 0.3s;
-  border-bottom: 0.1875rem solid #3D98B4;
-  border-left: 0.1875rem solid #3D98B4;
+  border-bottom: 0.1875rem solid #7C7C7C;
+  border-left: 0.1875rem solid #7C7C7C;
   content: "";
   height: 0.625rem;
   left: 0.25rem;
@@ -2454,7 +2454,7 @@ input[type=submit].c-button--submit:not(:disabled):hover {
 .p-radio input[type=radio] + span::after {
   -webkit-transform: translateY(-50%);
   -webkit-transition: opacity 0.3s, visibility 0.3s;
-  background-color: #3D98B4;
+  background-color: #7C7C7C;
   border-radius: 50%;
   content: "";
   height: 1rem;

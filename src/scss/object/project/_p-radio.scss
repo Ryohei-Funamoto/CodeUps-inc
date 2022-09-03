@@ -38,7 +38,7 @@
 }
 
 .p-radio input[type="radio"] + span::after {
-  background-color: #3D98B4;
+  background-color: $color-gray-600;
   border-radius: 50%;
   content: "";
   height: rem(16);

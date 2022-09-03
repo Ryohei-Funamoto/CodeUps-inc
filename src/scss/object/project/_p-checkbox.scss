@@ -46,8 +46,8 @@
 }
 
 .p-checkbox input[type="checkbox"]+span::after {
-  border-bottom: rem(3) solid #3D98B4;
-  border-left: rem(3) solid #3D98B4;
+  border-bottom: rem(3) solid $color-gray-600;
+  border-left: rem(3) solid $color-gray-600;
   content: "";
   height: rem(10);
   left: rem(4);
