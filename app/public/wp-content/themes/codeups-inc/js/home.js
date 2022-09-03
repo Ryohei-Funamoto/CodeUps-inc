@@ -158,9 +158,8 @@ window.addEventListener('DOMContentLoaded', function () {
     },
     stagger: {
       from: 'start',
-      amount: 0.25
-    },
-    duration: 1.0
+      amount: 0.5
+    }
   });
 
   /** Works */
