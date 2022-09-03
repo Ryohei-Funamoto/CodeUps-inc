@@ -21,7 +21,7 @@
 
 .p-pagination a {
   color: $color-white;
-  transition: background-color $duration, color $duration;
+  transition: background-color $duration-base, color $duration-base;
 }
 
 .p-pagination a:focus,

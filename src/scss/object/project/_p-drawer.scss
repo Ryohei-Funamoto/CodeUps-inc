@@ -5,7 +5,7 @@
   background-color: $color-main;
   padding-top: rem(80);
   transform: translateX(105%);
-  transition: transform $duration;
+  transition: transform $duration-base;
 }
 
 .p-drawer.is-open {

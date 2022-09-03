@@ -55,7 +55,7 @@
   color: $color-white;
   display: block;
   padding: rem(8) rem(16);
-  transition: background-color $duration, color $duration;
+  transition: background-color $duration-base, color $duration-base;
 }
 
 .single-article__category>a:focus,

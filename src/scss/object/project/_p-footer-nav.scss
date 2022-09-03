@@ -22,7 +22,7 @@
   color: $color-white;
   display: block;
   padding: rem(4) rem(12);
-  transition: opacity $duration;
+  transition: opacity $duration-base;
 
   @include mq('md') {
     padding: rem(8) rem(16);

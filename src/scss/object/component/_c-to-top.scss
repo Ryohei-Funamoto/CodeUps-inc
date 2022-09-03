@@ -6,8 +6,8 @@
   display: flex;
   justify-content: center;
   opacity: 0;
-  transition: background-color $duration;
-  transition: background-color $duration, opacity $duration, visibility $duration;
+  transition: background-color $duration-base;
+  transition: background-color $duration-base, opacity $duration-base, visibility $duration-base;
   visibility: hidden;
 }
 
@@ -31,7 +31,7 @@
   height: rem(12);
   margin-top: rem(8);
   transform: rotate(45deg);
-  transition: border-color $duration;
+  transition: border-color $duration-base;
   width: rem(12);
 }
 

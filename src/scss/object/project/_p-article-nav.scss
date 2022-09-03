@@ -39,7 +39,7 @@
   min-width: rem(70);
   padding: rem(3) rem(9);
   text-align: center;
-  transition: background-color $duration, color $duration;
+  transition: background-color $duration-base, color $duration-base;
 }
 
 .p-article-nav__item>a:focus,

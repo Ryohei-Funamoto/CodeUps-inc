@@ -61,7 +61,7 @@
   object-position: center center;
   position: absolute;
   top: 0;
-  // transition: transform $duration;
+  // transition: transform $duration-base;
 }
 
 // .works-card:focus .works-card__image>img,
@@ -98,7 +98,7 @@
   font-size: rem(20);
   justify-content: center;
   letter-spacing: math.div(2, 20) * 1em;
-  // transition: color $duration;
+  // transition: color $duration-base;
 }
 
 // .works-card:focus .works-card__title,

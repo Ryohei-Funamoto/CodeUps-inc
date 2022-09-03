@@ -3,7 +3,7 @@
 
 .p-header {
   background-color: color.adjust($color-main, $alpha: -0.5);
-  transition: background-color $duration;
+  transition: background-color $duration-base;
 }
 
 .p-header.is-colored {

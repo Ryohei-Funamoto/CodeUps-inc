@@ -58,7 +58,7 @@
 }
 
 .p-post--hover-colored {
-  transition: color $duration;
+  transition: color $duration-base;
 }
 
 .p-post--hover-colored:focus .p-post__title,
