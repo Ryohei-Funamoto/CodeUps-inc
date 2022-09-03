@@ -124,21 +124,38 @@ window.addEventListener('DOMContentLoaded', function () {
 
   // スムーズスクロール
   // #で始まるアンカーをクリックした場合にスムーススクロール
-  $('a[href^="#"]').on('click', function () {
-    const speed = 500;
-    // アンカーの値取得
-    const href = $(this).attr('href');
-    // 移動先を取得
-    const target = $(href == '#' || href == '' ? 'html' : href);
-    // 移動先を数値で取得
-    const position = target.offset().top;
+  // $('a[href^="#"]').on('click', function () {
+  //   const speed = 500;
+  //   // アンカーの値取得
+  //   const href = $(this).attr('href');
+  //   // 移動先を取得
+  //   const target = $(href == '#' || href == '' ? 'html' : href);
+  //   // 移動先を数値で取得
+  //   const position = target.offset().top;
 
-    // スムーススクロール
-    $('body,html').animate({
-      scrollTop: position
-    }, speed, 'swing');
-    return false;
-  });
+  //   // スムーススクロール
+  //   $('body,html').animate({
+  //     scrollTop: position
+  //   }, speed, 'swing');
+  //   return false;
+  // });
 
+  // ページのURLを取得
+	const url = $(location).attr('href'),
+	// headerの高さを取得してそれに30px追加した値をheaderHeightに代入
+	headerHeight = $('.l-header').outerHeight() + 30;
 
+	// urlに「#」が含まれていれば
+	if(url.indexOf("#") != -1){
+		// urlを#で分割して配列に格納
+		const anchor = url.split("#"),
+		// 分割した最後の文字列（#◯◯の部分）をtargetに代入
+		target = $('#' + anchor[anchor.length - 1]),
+		// リンク先の位置からheaderHeightの高さを引いた値をpositionに代入
+		position = Math.floor(target.offset().top) - headerHeight;
+		// positionの位置に移動
+		$("html, body").animate({
+      scrollTop:position
+    }, 500, 'swing');
+	}
 })(jQuery);
