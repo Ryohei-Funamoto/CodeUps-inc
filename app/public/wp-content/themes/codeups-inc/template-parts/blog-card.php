@@ -1,4 +1,12 @@
 <a href="<?php the_permalink(); ?>" class="<?php echo $args['class']; ?>">
+  <?php
+  $post_time = get_the_time('U');
+  $days = 7; // 7日以内に投稿された記事にNewバッジを表示
+  $last = time() - ($days * 24 * 60 * 60);
+  if ($post_time > $last) :
+  ?>
+    <span class="p-blog-card__badge">new</span>
+  <?php endif; ?>
   <div class="p-blog-card__head">
     <figure class="p-blog-card__image">
       <?php if (has_post_thumbnail()) : ?>

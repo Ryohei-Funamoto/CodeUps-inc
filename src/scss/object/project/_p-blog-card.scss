@@ -5,8 +5,32 @@
   background-color: $color-white;
   display: flex;
   flex-direction: column;
+  position: relative;
   transition: background-color $duration-base;
   width: 100%;
+}
+
+.p-blog-card__badge {
+  align-items: center;
+  background-color: $color-blog-badge;
+  border-radius: 50%;
+  color: $color-text02;
+  display: flex;
+  font-size: rem(16);
+  height: rem(60);
+  letter-spacing: math.div(2, 16) * 1em;
+  justify-content: center;
+  left: rem(-16);
+  position: absolute;
+  text-transform: capitalize;
+  top: rem(-16);
+  width: rem(60);
+  z-index: $layer-up;
+
+  @include mq('md') {
+    left: rem(-15);
+    top: rem(-20);
+  }
 }
 
 .p-blog-card:focus,
