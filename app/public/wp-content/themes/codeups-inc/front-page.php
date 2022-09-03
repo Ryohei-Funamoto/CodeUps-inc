@@ -108,7 +108,7 @@
         </li><!-- /.home-content__item -->
 
         <li class="home-content__item js-home-content-panel">
-          <a href="<?php echo esc_url(home_url('/content')); ?>#mission-1" class="home-content-panel">
+          <a href="<?php echo $u_content; ?>#mission-1" class="home-content-panel">
             <div class="home-content-panel__image">
               <img src="<?php echo esc_url(get_template_directory_uri() . '/img/home/home_content_2.jpg'); ?>" alt="理念1へ">
             </div><!-- /.home-content-panel__image -->
@@ -117,7 +117,7 @@
         </li><!-- /.home-content__item -->
 
         <li class="home-content__item js-home-content-panel">
-          <a href="<?php echo esc_url(home_url('/content')); ?>#mission-2" class="home-content-panel">
+          <a href="<?php echo $u_content; ?>#mission-2" class="home-content-panel">
             <div class="home-content-panel__image">
               <img src="<?php echo esc_url(get_template_directory_uri() . '/img/home/home_content_3.jpg'); ?>" alt="理念2へ">
             </div><!-- /.home-content-panel__image -->
@@ -126,7 +126,7 @@
         </li><!-- /.home-content__item -->
 
         <li class="home-content__item js-home-content-panel">
-          <a href="<?php echo esc_url(home_url('/content')); ?>#mission-3" class="home-content-panel">
+          <a href="<?php echo $u_content; ?>#mission-3" class="home-content-panel">
             <div class="home-content-panel__image">
               <img src="<?php echo esc_url(get_template_directory_uri() . '/img/home/home_content_4.jpg'); ?>" alt="理念3へ">
             </div><!-- /.home-content-panel__image -->
