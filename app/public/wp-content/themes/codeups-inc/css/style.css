@@ -1142,7 +1142,7 @@ input:-webkit-autofill {
 }
 
 .c-button {
-  -webkit-transition: color 0.3s;
+  -webkit-transition: color 0.5s;
   background-color: #333333;
   border: 0.0625rem solid #FFFFFF;
   color: #FFFFFF;
@@ -1153,7 +1153,7 @@ input:-webkit-autofill {
   max-width: 20.9375rem;
   padding: 0.875rem 2.625rem;
   position: relative;
-  transition: color 0.3s;
+  transition: color 0.5s;
   width: 100%;
   z-index: 1;
 }
@@ -1176,7 +1176,7 @@ input:-webkit-autofill {
 .c-button::after {
   -webkit-transform: scaleX(0);
   -webkit-transform-origin: right center;
-  -webkit-transition: -webkit-transform 0.3s;
+  -webkit-transition: -webkit-transform 0.5s;
   background-color: #FFFFFF;
   content: "";
   display: block;
@@ -1186,9 +1186,9 @@ input:-webkit-autofill {
   top: 0;
           transform: scaleX(0);
           transform-origin: right center;
-  transition: -webkit-transform 0.3s;
-  transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
   width: 100%;
   z-index: -1;
 }
@@ -1223,7 +1223,7 @@ input:-webkit-autofill {
 .c-button--home-news::after {
   -webkit-transform: scaleX(0);
   -webkit-transform-origin: right center;
-  -webkit-transition: -webkit-transform 0.3s;
+  -webkit-transition: -webkit-transform 0.5s;
   background-color: #333333;
   content: "";
   display: block;
@@ -1233,20 +1233,20 @@ input:-webkit-autofill {
   top: 0;
           transform: scaleX(0);
           transform-origin: right center;
-  transition: -webkit-transform 0.3s;
-  transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
   width: 100%;
   z-index: -1;
 }
 
 input[type=submit].c-button--submit {
-  -webkit-transition: background-color 0.3s, color 0.3s;
+  -webkit-transition: background-color 0.5s, color 0.5s;
   background-color: #FFFFFF;
   border: 0.0625rem solid #FFFFFF;
   color: #333333;
   padding: 1rem 2.625rem;
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.5s, color 0.5s;
   width: 100%;
 }
 @media screen and (min-width: 768px) {
@@ -1301,8 +1301,8 @@ input[type=submit].c-button--submit:not(:disabled):hover {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
-  -webkit-transition: background-color 0.3s;
-  -webkit-transition: background-color 0.3s, opacity 0.3s, visibility 0.3s;
+  -webkit-transition: background-color 0.5s;
+  -webkit-transition: background-color 0.5s, opacity 0.5s, visibility 0.5s;
           align-items: center;
   background-color: #FFFFFF;
   display: -webkit-box;
@@ -1311,8 +1311,8 @@ input[type=submit].c-button--submit:not(:disabled):hover {
   display: flex;
           justify-content: center;
   opacity: 0;
-  transition: background-color 0.3s;
-  transition: background-color 0.3s, opacity 0.3s, visibility 0.3s;
+  transition: background-color 0.5s;
+  transition: background-color 0.5s, opacity 0.5s, visibility 0.5s;
   visibility: hidden;
 }
 
@@ -1330,7 +1330,7 @@ input[type=submit].c-button--submit:not(:disabled):hover {
 
 .c-to-top::before {
   -webkit-transform: rotate(45deg);
-  -webkit-transition: border-color 0.3s;
+  -webkit-transition: border-color 0.5s;
   border-left: 0.1875rem solid #333333;
   border-top: 0.1875rem solid #333333;
   content: "";
@@ -1338,7 +1338,7 @@ input[type=submit].c-button--submit:not(:disabled):hover {
   height: 0.75rem;
   margin-top: 0.5rem;
           transform: rotate(45deg);
-  transition: border-color 0.3s;
+  transition: border-color 0.5s;
   width: 0.75rem;
 }
 
@@ -1386,7 +1386,7 @@ input[type=submit].c-button--submit:not(:disabled):hover {
 }
 
 .p-article-nav__item > a {
-  -webkit-transition: background-color 0.3s, color 0.3s;
+  -webkit-transition: background-color 0.5s, color 0.5s;
   background-color: #111111;
   border: 0.0625rem solid #FFFFFF;
   color: #FFFFFF;
@@ -1394,7 +1394,7 @@ input[type=submit].c-button--submit:not(:disabled):hover {
   min-width: 4.375rem;
   padding: 0.1875rem 0.5625rem;
   text-align: center;
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.5s, color 0.5s;
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -1410,14 +1410,14 @@ input[type=submit].c-button--submit:not(:disabled):hover {
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
-  -webkit-transition: background-color 0.3s;
+  -webkit-transition: background-color 0.5s;
   background-color: #FFFFFF;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
           flex-direction: column;
-  transition: background-color 0.3s;
+  transition: background-color 0.5s;
   width: 100%;
 }
 
@@ -1434,12 +1434,12 @@ input[type=submit].c-button--submit:not(:disabled):hover {
 
 .p-blog-card__image {
   -webkit-transform: scale(1);
-  -webkit-transition: -webkit-transform 0.3s;
+  -webkit-transition: -webkit-transform 0.5s;
   position: relative;
           transform: scale(1);
-  transition: -webkit-transform 0.3s;
-  transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -1478,13 +1478,13 @@ input[type=submit].c-button--submit:not(:disabled):hover {
 }
 
 .p-blog-card__title {
-  -webkit-transition: color 0.3s;
+  -webkit-transition: color 0.5s;
   color: #333333;
   font-size: 1.125rem;
   font-weight: 500;
   letter-spacing: 0.0555555556em;
   line-height: 2;
-  transition: color 0.3s;
+  transition: color 0.5s;
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -1495,13 +1495,13 @@ input[type=submit].c-button--submit:not(:disabled):hover {
 }
 
 .p-blog-card__description {
-  -webkit-transition: color 0.3s;
+  -webkit-transition: color 0.5s;
   color: #333333;
   font-size: 0.875rem;
   letter-spacing: 0.0714285714em;
   line-height: 1.8571428571;
   margin-top: 0.75rem;
-  transition: color 0.3s;
+  transition: color 0.5s;
 }
 
 .p-blog-card--no-description .p-blog-card__description {
@@ -1548,13 +1548,13 @@ input[type=submit].c-button--submit:not(:disabled):hover {
 }
 
 .p-blog-card__published {
-  -webkit-transition: color 0.3s;
+  -webkit-transition: color 0.5s;
   color: #333333;
   font-size: 0.875rem;
   letter-spacing: 0.0714285714em;
   min-width: 6.125rem;
   padding-left: 1.125rem;
-  transition: color 0.3s;
+  transition: color 0.5s;
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -1702,14 +1702,14 @@ input[type=submit].c-button--submit:not(:disabled):hover {
 
 .p-drawer {
   -webkit-transform: translateX(105%);
-  -webkit-transition: -webkit-transform 0.3s;
+  -webkit-transition: -webkit-transform 0.5s;
   background-color: #111111;
   padding-bottom: 5rem;
   padding-top: 5rem;
           transform: translateX(105%);
-  transition: -webkit-transform 0.3s;
-  transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
 }
 
 .p-drawer.is-open {
@@ -1809,11 +1809,11 @@ input[type=submit].c-button--submit:not(:disabled):hover {
 }
 
 .p-footer-nav__items > li > a {
-  -webkit-transition: opacity 0.3s;
+  -webkit-transition: opacity 0.5s;
   color: #FFFFFF;
   display: block;
   padding: 0.25rem 0.75rem;
-  transition: opacity 0.3s;
+  transition: opacity 0.5s;
 }
 @media screen and (min-width: 768px) {
   .p-footer-nav__items > li > a {
@@ -1952,12 +1952,12 @@ input[type=submit].c-button--submit:not(:disabled):hover {
 }
 
 .p-gnav__items > li:last-child > a {
-  -webkit-transition: color 0.3s;
+  -webkit-transition: color 0.5s;
   background-color: #FFFFFF;
   color: #333333;
   margin-left: 1rem;
   padding: 0 2rem;
-  transition: color 0.3s;
+  transition: color 0.5s;
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -1970,7 +1970,7 @@ input[type=submit].c-button--submit:not(:disabled):hover {
 .p-gnav__items > li:not(:last-child) > a::after {
   -webkit-transform: translateX(-50%) scaleX(0);
   -webkit-transform-origin: right center;
-  -webkit-transition: -webkit-transform 0.3s;
+  -webkit-transition: -webkit-transform 0.5s;
   background-color: #FFEA2E;
   bottom: 0;
   content: "";
@@ -1980,9 +1980,9 @@ input[type=submit].c-button--submit:not(:disabled):hover {
   position: absolute;
           transform: translateX(-50%) scaleX(0);
           transform-origin: right center;
-  transition: -webkit-transform 0.3s;
-  transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
   width: calc(100% - 1rem * 2);
 }
 
@@ -1999,7 +1999,7 @@ input[type=submit].c-button--submit:not(:disabled):hover {
 .p-gnav__items > li:last-child > a::after {
   -webkit-transform: scaleX(0);
   -webkit-transform-origin: right center;
-  -webkit-transition: -webkit-transform 0.3s;
+  -webkit-transition: -webkit-transform 0.5s;
   background-color: #333333;
   content: "";
   display: block;
@@ -2009,9 +2009,9 @@ input[type=submit].c-button--submit:not(:disabled):hover {
   top: 0;
           transform: scaleX(0);
           transform-origin: right center;
-  transition: -webkit-transform 0.3s;
-  transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
   width: 100%;
   z-index: -1;
 }
@@ -2035,7 +2035,7 @@ input[type=submit].c-button--submit:not(:disabled):hover {
 .p-gnav__items .sub-menu {
   -webkit-transform: translateX(-50%) scaleY(0);
   -webkit-transform-origin: center top;
-  -webkit-transition: -webkit-transform 0.3s;
+  -webkit-transition: -webkit-transform 0.5s;
   background-color: #3D3D3D;
   left: 50%;
   padding: 1.25rem 0.625rem;
@@ -2043,9 +2043,9 @@ input[type=submit].c-button--submit:not(:disabled):hover {
   top: 100%;
           transform: translateX(-50%) scaleY(0);
           transform-origin: center top;
-  transition: -webkit-transform 0.3s;
-  transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
   width: 12.5rem;
 }
 
@@ -2062,11 +2062,11 @@ input[type=submit].c-button--submit:not(:disabled):hover {
 }
 
 .p-gnav__items .sub-menu > li > a {
-  -webkit-transition: opacity 0.3s;
+  -webkit-transition: opacity 0.5s;
   color: #FFFFFF;
   display: block;
   padding: 0.5rem;
-  transition: opacity 0.3s;
+  transition: opacity 0.5s;
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -2098,14 +2098,14 @@ input[type=submit].c-button--submit:not(:disabled):hover {
 }
 
 .p-hamburger__bar {
-  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+  -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
   background-color: #FFFFFF;
   height: 0.125rem;
   left: 0;
   position: absolute;
-  transition: opacity 0.3s, -webkit-transform 0.3s;
-  transition: transform 0.3s, opacity 0.3s;
-  transition: transform 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+  transition: opacity 0.5s, -webkit-transform 0.5s;
+  transition: transform 0.5s, opacity 0.5s;
+  transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s;
   width: 100%;
 }
 
@@ -2138,9 +2138,9 @@ input[type=submit].c-button--submit:not(:disabled):hover {
 }
 
 .p-header {
-  -webkit-transition: background-color 0.3s;
+  -webkit-transition: background-color 0.5s;
   background-color: rgba(17, 17, 17, 0.5);
-  transition: background-color 0.3s;
+  transition: background-color 0.5s;
 }
 
 .p-header.is-colored {
@@ -2270,9 +2270,9 @@ input[type=submit].c-button--submit:not(:disabled):hover {
 }
 
 .p-pagination a {
-  -webkit-transition: background-color 0.3s, color 0.3s;
+  -webkit-transition: background-color 0.5s, color 0.5s;
   color: #FFFFFF;
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.5s, color 0.5s;
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -2368,8 +2368,8 @@ input[type=submit].c-button--submit:not(:disabled):hover {
 }
 
 .p-post--hover-colored {
-  -webkit-transition: color 0.3s;
-  transition: color 0.3s;
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -2564,12 +2564,12 @@ input[type=submit].c-button--submit:not(:disabled):hover {
 }
 
 .p-term-nav__item > a {
-  -webkit-transition: background-color 0.3s, color 0.3s;
+  -webkit-transition: background-color 0.5s, color 0.5s;
   background-color: #111111;
   color: #FFFFFF;
   display: block;
   padding: 0.4375rem 0.5rem;
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.5s, color 0.5s;
 }
 @media screen and (min-width: 768px) {
   .p-term-nav__item > a {
