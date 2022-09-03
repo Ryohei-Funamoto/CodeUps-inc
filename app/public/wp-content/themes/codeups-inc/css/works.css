@@ -67,6 +67,29 @@
   }
 }
 
+.works-card__head::before {
+  -webkit-transform: skewX(-25deg);
+  -webkit-transition: left 0.7s;
+  background-color: #F9F871;
+  content: "";
+  display: block;
+  height: 100%;
+  left: -75%;
+  position: absolute;
+  top: 0;
+          transform: skewX(-25deg);
+  transition: left 0.7s;
+  width: 3.125rem;
+  z-index: 1;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .works-card:focus .works-card__head::before,
+.works-card:hover .works-card__head::before {
+    left: 125%;
+  }
+}
+
 .works-card__image {
   position: relative;
 }
@@ -86,7 +109,6 @@
   -webkit-backface-visibility: hidden;
   -o-object-fit: cover;
   -o-object-position: center center;
-  -webkit-transition: -webkit-transform 0.3s;
           backface-visibility: hidden;
   height: 100%;
   left: 0;
@@ -95,17 +117,6 @@
      object-position: center center;
   position: absolute;
   top: 0;
-  transition: -webkit-transform 0.3s;
-  transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s;
-}
-
-@media (hover: hover) and (pointer: fine) {
-  .works-card:focus .works-card__image > img,
-.works-card:hover .works-card__image > img {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
-  }
 }
 
 .works-card__category {
@@ -118,6 +129,7 @@
   position: absolute;
   right: 0;
   top: 0;
+  z-index: 2;
 }
 
 .works-card__body {
@@ -133,7 +145,6 @@
   -webkit-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
-  -webkit-transition: color 0.3s;
   color: #FFFFFF;
   display: -webkit-box;
   display: -webkit-flex;
@@ -142,14 +153,6 @@
   font-size: 1.25rem;
           justify-content: center;
   letter-spacing: 0.1em;
-  transition: color 0.3s;
-}
-
-@media (hover: hover) and (pointer: fine) {
-  .works-card:focus .works-card__title,
-.works-card:hover .works-card__title {
-    color: #F9F871;
-  }
 }
 
 .works-point {

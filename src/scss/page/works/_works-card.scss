@@ -17,6 +17,27 @@
   }
 }
 
+.works-card__head::before {
+  background-color: $color-main-accent;
+  content: '';
+  display: block;
+  height: 100%;
+  left: -75%;
+  position: absolute;
+  top: 0;
+  transform: skewX(-25deg);
+  transition: left 0.7s;
+  width: rem(50);
+  z-index: $layer-default;
+}
+
+.works-card:focus .works-card__head::before,
+.works-card:hover .works-card__head::before {
+  @include mq('hover-pc') {
+    left: 125%;
+  }
+}
+
 .works-card__image {
   position: relative;
 }
@@ -40,15 +61,15 @@
   object-position: center center;
   position: absolute;
   top: 0;
-  transition: transform 0.3s;
+  // transition: transform $duration;
 }
 
-.works-card:focus .works-card__image>img,
-.works-card:hover .works-card__image>img {
-  @include mq('hover-pc') {
-    transform: scale(1.1);
-  }
-}
+// .works-card:focus .works-card__image>img,
+// .works-card:hover .works-card__image>img {
+//   @include mq('hover-pc') {
+//     transform: scale(1.1);
+//   }
+// }
 
 .works-card__category {
   background-color: $color-main;
@@ -60,6 +81,7 @@
   position: absolute;
   right: 0;
   top: 0;
+  z-index: $layer-up;
 }
 
 .works-card__body {
@@ -76,12 +98,12 @@
   font-size: rem(20);
   justify-content: center;
   letter-spacing: math.div(2, 20) * 1em;
-  transition: color $duration;
+  // transition: color $duration;
 }
 
-.works-card:focus .works-card__title,
-.works-card:hover .works-card__title {
-  @include mq('hover-pc') {
-    color: $color-main-accent;
-  }
-}
+// .works-card:focus .works-card__title,
+// .works-card:hover .works-card__title {
+//   @include mq('hover-pc') {
+//     color: $color-main-accent;
+//   }
+// }
