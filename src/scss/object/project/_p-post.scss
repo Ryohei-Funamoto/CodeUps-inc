@@ -35,13 +35,13 @@
   font-size: rem(14);
   line-height: 1;
   min-width: rem(100);
-  padding: rem(7) rem(14);
+  padding: rem(8) rem(14) rem(7);
   text-align: center;
 }
 
 .p-post__title {
   font-size: rem(16);
-  margin-top: rem(16);
+  margin-top: rem(14);
 
   @include mq('md') {
     margin-left: rem(28);

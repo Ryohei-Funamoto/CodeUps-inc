@@ -31,6 +31,10 @@
 .p-header__logo {
   width: rem(70);
   z-index: $layer-hamburger;
+
+  @include mq('md') {
+    width: rem(94);
+  }
 }
 
 .p-header__title {

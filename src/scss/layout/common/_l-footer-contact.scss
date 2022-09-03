@@ -2,10 +2,10 @@
 
 .l-footer-contact {
   margin-top: rem(120);
-  padding: rem(32) 0 rem(64);
+  padding: rem(18) 0 rem(64);
 
   @include mq('md') {
     margin-top: rem(150);
-    padding: rem(60) 0 rem(150);
+    padding: rem(54) 0 rem(150);
   }
 }

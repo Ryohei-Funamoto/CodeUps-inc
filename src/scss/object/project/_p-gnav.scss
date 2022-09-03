@@ -35,7 +35,7 @@
 .p-gnav__items>li:not(:last-child)>a {
   color: $color-white;
   // padding: 0 rem(51);
-  padding: 0 rem(16);
+  padding: 0 rem(15);
 }
 
 .p-gnav__items>li:last-child>a {
@@ -43,7 +43,7 @@
   color: $color-text02;
   margin-left: rem(16);
   // padding: 0 rem(85);
-  padding: 0 rem(32);
+  padding: 0 rem(31);
   transition: color $duration-base;
 }
 

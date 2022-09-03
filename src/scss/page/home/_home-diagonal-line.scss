@@ -25,11 +25,11 @@
 .home-diagonal-line--upward .home-diagonal-line__body {
   clip-path: polygon(0% 99.9%, 99.9% 0%, 100% 0.1%, 0.1% 100%);
   height: rem(1399);
-  top: rem(-510);
+  top: rem(-522);
 
   @include mq('md') {
     height: rem(1280);
-    top: rem(-60);
+    top: rem(-67);
   }
 }
 

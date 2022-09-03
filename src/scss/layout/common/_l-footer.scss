@@ -2,9 +2,9 @@
 
 .l-footer {
   margin-top: auto;
-  padding: rem(48) 0;
+  padding: rem(50) 0 rem(48);
 
   @include mq('md') {
-    padding: rem(32) 0 rem(26);
+    padding: rem(28) 0 rem(26);
   }
 }

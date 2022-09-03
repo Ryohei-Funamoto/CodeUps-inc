@@ -18,15 +18,13 @@
 }
 
 .p-footer-contact__main-title {
-  bottom: 0;
   left: 50%;
   position: absolute;
+  top: 64%;
   transform: translateX(-50%);
   
   @include mq('md') {
-    bottom: auto;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    top: 54%;
   }
 }
 
@@ -36,16 +34,16 @@
   margin-top: rem(20);
 
   @include mq('md') {
-    margin-top: rem(-24);
+    margin-top: rem(-14);
     text-align: center;
   }
 }
 
 .p-footer-contact__button {
-  margin-top: rem(40);
+  margin-top: rem(47);
   text-align: center;
 
   @include mq('md') {
-    margin-top: rem(60);
+    margin-top: rem(62);
   }
 }

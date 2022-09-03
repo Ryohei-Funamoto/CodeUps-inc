@@ -39,7 +39,11 @@
 .home-content-panel__image::before {
   content: '';
   display: block;
-  padding-top: 100%;
+  @include paddingTopHack(188, 168);
+  
+  @include mq('md') {
+    @include paddingTopHack(320, 320);
+  }
 }
 
 .home-content-panel__image>img {

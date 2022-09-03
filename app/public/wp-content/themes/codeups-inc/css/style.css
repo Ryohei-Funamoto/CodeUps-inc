@@ -1087,22 +1087,22 @@ input:-webkit-autofill {
 
 .l-footer-contact {
   margin-top: 7.5rem;
-  padding: 2rem 0 4rem;
+  padding: 1.125rem 0 4rem;
 }
 @media screen and (min-width: 768px) {
   .l-footer-contact {
     margin-top: 9.375rem;
-    padding: 3.75rem 0 9.375rem;
+    padding: 3.375rem 0 9.375rem;
   }
 }
 
 .l-footer {
   margin-top: auto;
-  padding: 3rem 0;
+  padding: 3.125rem 0 3rem;
 }
 @media screen and (min-width: 768px) {
   .l-footer {
-    padding: 2rem 0 1.625rem;
+    padding: 1.75rem 0 1.625rem;
   }
 }
 
@@ -1133,12 +1133,18 @@ input:-webkit-autofill {
 }
 
 .l-to-top {
-  bottom: 2rem;
+  bottom: 2.5625rem;
   height: 2.8125rem;
   position: fixed;
-  right: 2rem;
+  right: 1.3125rem;
   width: 2.8125rem;
   z-index: 20;
+}
+@media screen and (min-width: 768px) {
+  .l-to-top {
+    bottom: 2rem;
+    right: 2rem;
+  }
 }
 
 .c-button {
@@ -1331,15 +1337,15 @@ input[type=submit].c-button--submit:not(:disabled):hover {
 .c-to-top::before {
   -webkit-transform: rotate(45deg);
   -webkit-transition: border-color 0.5s;
-  border-left: 0.1875rem solid #333333;
-  border-top: 0.1875rem solid #333333;
+  border-left: 0.125rem solid #333333;
+  border-top: 0.125rem solid #333333;
   content: "";
   display: block;
-  height: 0.75rem;
+  height: 1.125rem;
   margin-top: 0.5rem;
           transform: rotate(45deg);
   transition: border-color 0.5s;
-  width: 0.75rem;
+  width: 1.125rem;
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -1508,7 +1514,7 @@ input[type=submit].c-button--submit:not(:disabled):hover {
 }
 
 .p-blog-card__body {
-  padding: 0.75rem 1.4375rem 0;
+  padding: 0.1875rem 1.4375rem 0;
 }
 
 .p-blog-card__title {
@@ -1534,7 +1540,7 @@ input[type=submit].c-button--submit:not(:disabled):hover {
   font-size: 0.875rem;
   letter-spacing: 0.0714285714em;
   line-height: 1.8571428571;
-  margin-top: 0.75rem;
+  margin-top: 0.125rem;
   transition: color 0.5s;
 }
 
@@ -1784,17 +1790,14 @@ input[type=submit].c-button--submit:not(:disabled):hover {
 
 .p-footer-contact__main-title {
   -webkit-transform: translateX(-50%);
-  bottom: 0;
   left: 50%;
   position: absolute;
+  top: 64%;
           transform: translateX(-50%);
 }
 @media screen and (min-width: 768px) {
   .p-footer-contact__main-title {
-    -webkit-transform: translate(-50%, -50%);
-    bottom: auto;
-    top: 50%;
-            transform: translate(-50%, -50%);
+    top: 54%;
   }
 }
 
@@ -1805,18 +1808,18 @@ input[type=submit].c-button--submit:not(:disabled):hover {
 }
 @media screen and (min-width: 768px) {
   .p-footer-contact__description {
-    margin-top: -1.5rem;
+    margin-top: -0.875rem;
     text-align: center;
   }
 }
 
 .p-footer-contact__button {
-  margin-top: 2.5rem;
+  margin-top: 2.9375rem;
   text-align: center;
 }
 @media screen and (min-width: 768px) {
   .p-footer-contact__button {
-    margin-top: 3.75rem;
+    margin-top: 3.875rem;
   }
 }
 
@@ -1869,6 +1872,7 @@ input[type=submit].c-button--submit:not(:disabled):hover {
 @media screen and (min-width: 768px) {
   .p-footer__container {
     max-width: 100%;
+    padding: 0 1rem 0 2rem;
   }
 }
 
@@ -1900,7 +1904,7 @@ input[type=submit].c-button--submit:not(:disabled):hover {
 }
 
 .p-footer__nav {
-  margin: 0.5rem auto 0;
+  margin: 0.125rem auto 0;
   max-width: 15.625rem;
   width: 100%;
 }
@@ -1917,7 +1921,7 @@ input[type=submit].c-button--submit:not(:disabled):hover {
 }
 @media screen and (min-width: 768px) {
   .p-footer__lower {
-    margin-top: 4rem;
+    margin-top: 4.375rem;
   }
 }
 
@@ -1982,7 +1986,7 @@ input[type=submit].c-button--submit:not(:disabled):hover {
 
 .p-gnav__items > li:not(:last-child) > a {
   color: #FFFFFF;
-  padding: 0 1rem;
+  padding: 0 0.9375rem;
 }
 
 .p-gnav__items > li:last-child > a {
@@ -1990,7 +1994,7 @@ input[type=submit].c-button--submit:not(:disabled):hover {
   background-color: #FFFFFF;
   color: #333333;
   margin-left: 1rem;
-  padding: 0 2rem;
+  padding: 0 1.9375rem;
   transition: color 0.5s;
 }
 
@@ -2210,6 +2214,11 @@ input[type=submit].c-button--submit:not(:disabled):hover {
   width: 4.375rem;
   z-index: 41;
 }
+@media screen and (min-width: 768px) {
+  .p-header__logo {
+    width: 5.875rem;
+  }
+}
 
 .p-header__title {
   font-size: 1rem;
@@ -2378,13 +2387,13 @@ input[type=submit].c-button--submit:not(:disabled):hover {
   font-size: 0.875rem;
   line-height: 1;
   min-width: 6.25rem;
-  padding: 0.4375rem 0.875rem;
+  padding: 0.5rem 0.875rem 0.4375rem;
   text-align: center;
 }
 
 .p-post__title {
   font-size: 1rem;
-  margin-top: 1rem;
+  margin-top: 0.875rem;
 }
 @media screen and (min-width: 768px) {
   .p-post__title {

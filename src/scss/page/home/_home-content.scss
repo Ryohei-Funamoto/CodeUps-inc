@@ -17,15 +17,13 @@
 }
 
 .home-content__main-title {
-  bottom: 0;
   left: 50%;
   position: absolute;
+  top: 66%;
   transform: translateX(-50%);
   
   @include mq('md') {
-    bottom: auto;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    top: 26%;
   }
 }
 
@@ -33,7 +31,7 @@
   column-gap: 0;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  margin: rem(48) calc(50% - 50vw) 0;
+  margin: rem(52) calc(50% - 50vw) 0;
   row-gap: 0;
   width: 100vw;
 

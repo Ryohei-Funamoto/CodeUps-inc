@@ -13,13 +13,12 @@
 }
 
 .home-blog__main-title {
-  bottom: 0;
   left: 50%;
   position: absolute;
+  top: 66%;
   transform: translateX(-50%);
   
   @include mq('md') {
-    bottom: auto;
     top: 50%;
     transform: translate(-50%, -50%);
   }
@@ -29,13 +28,13 @@
   column-gap: 0;
   display: grid;
   grid-template-columns: 1fr;
-  margin-top: rem(72);
+  margin-top: rem(70);
   row-gap: rem(24);
 
   @include mq('md') {
     column-gap: rem(24);
     grid-template-columns: repeat(3, 1fr);
-    margin-top: rem(-24);
+    margin-top: rem(-26);
   }
 }
 

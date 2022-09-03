@@ -24,15 +24,15 @@
 }
 
 .c-to-top::before {
-  border-left: rem(3) solid $color-bg02;
-  border-top: rem(3) solid $color-bg02;
+  border-left: rem(2) solid $color-bg02;
+  border-top: rem(2) solid $color-bg02;
   content: '';
   display: block;
-  height: rem(12);
+  height: rem(18);
   margin-top: rem(8);
   transform: rotate(45deg);
   transition: border-color $duration-base;
-  width: rem(12);
+  width: rem(18);
 }
 
 .c-to-top:focus::before,

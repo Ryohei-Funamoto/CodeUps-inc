@@ -1,10 +1,15 @@
 @use "global" as *;
 
 .l-to-top {
-  bottom: rem(32);
+  bottom: rem(41);
   height: rem(45);
   position: fixed;
-  right: rem(32);
+  right: rem(21);
   width: rem(45);
   z-index: $layer-floating;
+  
+  @include mq('md') {
+    bottom: rem(32);
+    right: rem(32);
+  }
 }

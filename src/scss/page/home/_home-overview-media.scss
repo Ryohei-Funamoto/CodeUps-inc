@@ -67,17 +67,17 @@
 .home-overview-media__description {
   font-size: rem(16);
   letter-spacing: calc(2 / 16 * 1em);
-  margin-top: rem(24);
+  margin-top: rem(23);
   
   @include mq('md') {
     letter-spacing: calc(0.5 / 16 * 1em);
     @include lineHeight(16, 35);
-    margin-top: rem(48);
+    margin-top: rem(26);
   }
 }
 
 .home-overview-media__button {
-  margin-top: rem(16);
+  margin-top: rem(21);
   text-align: center;
 
   @include mq('md') {

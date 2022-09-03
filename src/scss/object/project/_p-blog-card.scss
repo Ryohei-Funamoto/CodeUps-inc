@@ -78,7 +78,7 @@
 }
 
 .p-blog-card__body {
-  padding: rem(12) rem(23) 0;
+  padding: rem(3) rem(23) 0;
 }
 
 .p-blog-card__title {
@@ -102,7 +102,7 @@
   font-size: rem(14);
   letter-spacing: math.div(1, 14) * 1em;
   @include lineHeight(14, 26);
-  margin-top: rem(12);
+  margin-top: rem(2);
   transition: color $duration-base;
 }
 
