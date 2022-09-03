@@ -1,6 +1,6 @@
 'use strict';
 
-document.addEventListener('DOMContentLoaded', function () {
+window.addEventListener('DOMContentLoaded', function () {
   const worksThumbs = new Swiper('.js-works-thumbs-slider', {
     slidesPerView: 3,
     spaceBetween: 12,

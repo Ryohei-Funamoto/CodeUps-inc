@@ -1,6 +1,6 @@
 'use strict';
 
-document.addEventListener('DOMContentLoaded', function () {
+window.addEventListener('DOMContentLoaded', function () {
   /** ハンバーガーメニュー */
   var hamburger = document.querySelector('.js-hamburger');
   var drawer = document.querySelector('.js-drawer');
