@@ -1,9 +1,9 @@
 @use "global" as *;
 
 .l-page-404__content {
-  margin-top: rem(130);
+  margin-top: rem(118);
   
   @include mq('md') {
-    margin-top: rem(200);
+    margin-top: rem(173);
   }
 }
