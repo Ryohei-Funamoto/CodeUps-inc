@@ -1,11 +1,15 @@
 @use "global" as *;
 
 .l-content__top-mission {
-  margin-top: rem(85);
+  margin-top: rem(84);
+
+  @include mq('md') {
+    margin-top: rem(67);
+  }
 }
 
 .l-content__sub-mission {
-  margin-top: rem(80);
+  margin-top: rem(87);
 
   @include mq('md') {
     margin-top: rem(150);
