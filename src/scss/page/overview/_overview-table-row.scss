@@ -17,21 +17,33 @@
 
 .overview-table-row__header {
   font-weight: $regular;
-  padding: rem(14) rem(10) rem(22) rem(5);
+  padding: rem(14) rem(10) rem(19) rem(5);
   width: rem(114);
 
   @include mq('md') {
-    padding: rem(33) rem(20) rem(28) 0;
+    padding: rem(34) rem(20) rem(28) 0;
     width: rem(152);
   }
 }
 
 .overview-table-row__data {
-  padding: rem(14) 0 rem(22);
+  padding: rem(14) 0 rem(19);
   width: calc(100% - #{rem(114)});
 
   @include mq('md') {
-    padding: rem(33) 0 rem(28);
+    padding: rem(34) 0 rem(28);
     width: calc(100% - #{rem(152)});
+  }
+}
+
+.overview-table-row__data>a {
+  color: $color-text;
+  transition: opacity $duration-base;
+}
+
+.overview-table-row__data>a:focus,
+.overview-table-row__data>a:hover {
+  @include mq('hover-pc') {
+    opacity: $opacity;
   }
 }
