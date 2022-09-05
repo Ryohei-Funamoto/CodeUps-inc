@@ -46,7 +46,7 @@
 }
 @media screen and (min-width: 768px) {
   .l-contact__thanks {
-    margin-top: 12.5rem;
+    margin-top: 12.25rem;
   }
 }
 
@@ -122,18 +122,24 @@
 .contact-thanks__lead {
   font-size: 1.25rem;
   letter-spacing: 0.1em;
-  margin-top: 5rem;
+  margin-top: 4.9375rem;
   text-align: center;
 }
 @media screen and (min-width: 768px) {
   .contact-thanks__lead {
     font-size: 1.875rem;
     letter-spacing: 0.0666666667em;
+    margin-top: 4.375rem;
   }
 }
 
 .contact-thanks__button {
-  margin-top: 5rem;
+  margin-top: 4.875rem;
   text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .contact-thanks__button {
+    margin-top: 4.625rem;
+  }
 }
 /*# sourceMappingURL=contact.css.map */

@@ -15,16 +15,21 @@
 .contact-thanks__lead {
   font-size: rem(20);
   letter-spacing: math.div(2, 20) * 1em;
-  margin-top: rem(80);
+  margin-top: rem(79);
   text-align: center;
   
   @include mq('md') {
     font-size: rem(30);
     letter-spacing: math.div(2, 30) * 1em;
+    margin-top: rem(70);
   }
 }
 
 .contact-thanks__button {
-  margin-top: rem(80);
+  margin-top: rem(78);
   text-align: center;
+  
+  @include mq('md') {
+    margin-top: rem(74);
+  }
 }
