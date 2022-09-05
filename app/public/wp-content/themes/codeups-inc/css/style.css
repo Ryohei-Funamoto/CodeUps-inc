@@ -1120,7 +1120,7 @@ input:-webkit-autofill {
 }
 @media screen and (min-width: 768px) {
   .l-pagination {
-    margin-top: 6.5rem;
+    margin-top: 6.75rem;
   }
 }
 
@@ -1134,7 +1134,12 @@ input:-webkit-autofill {
 }
 
 .l-term-nav {
-  margin-top: 5.3125rem;
+  margin-top: 5.25rem;
+}
+@media screen and (min-width: 768px) {
+  .l-term-nav {
+    margin-top: 7.125rem;
+  }
 }
 
 .l-to-top {
@@ -2613,7 +2618,7 @@ input[type=submit].c-button--submit:not(:disabled):hover {
   display: -ms-flexbox;
   display: flex;
           flex-wrap: wrap;
-  margin-bottom: -1rem;
+  margin-bottom: -0.75rem;
 }
 @media screen and (min-width: 768px) {
   .p-term-nav__items {
@@ -2625,7 +2630,7 @@ input[type=submit].c-button--submit:not(:disabled):hover {
   font-size: 1rem;
   letter-spacing: 0.125em;
   line-height: 1;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 }
 @media screen and (min-width: 768px) {
   .p-term-nav__item {

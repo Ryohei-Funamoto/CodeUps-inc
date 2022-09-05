@@ -42,11 +42,11 @@
 }
 @media screen and (min-width: 768px) {
   .works-archive__items {
-    -webkit-column-gap: 3rem;
-       -moz-column-gap: 3rem;
-            column-gap: 3rem;
+    -webkit-column-gap: 3.125rem;
+       -moz-column-gap: 3.125rem;
+            column-gap: 3.125rem;
     grid-template-columns: repeat(2, 1fr);
-    row-gap: 7.125rem;
+    row-gap: 7.375rem;
   }
 }
 
@@ -122,11 +122,11 @@
 }
 
 .works-card__body {
-  margin-top: 1.5rem;
+  margin-top: 1.8125rem;
 }
 @media screen and (min-width: 768px) {
   .works-card__body {
-    margin-top: 0.75rem;
+    margin-top: 0.8125rem;
   }
 }
 

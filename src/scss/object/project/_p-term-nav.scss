@@ -4,7 +4,7 @@
 .p-term-nav__items {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: rem(-16);
+  margin-bottom: rem(-12);
 
   @include mq('md') {
     margin-bottom: rem(-20);
@@ -15,7 +15,7 @@
   font-size: rem(16);
   letter-spacing: math.div(2, 16) * 1em;
   line-height: 1;
-  margin-bottom: rem(16);
+  margin-bottom: rem(12);
 
   @include mq('md') {
     margin-bottom: rem(20);

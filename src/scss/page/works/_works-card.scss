@@ -85,10 +85,10 @@
 }
 
 .works-card__body {
-  margin-top: rem(24);
+  margin-top: rem(29);
 
   @include mq('md') {
-    margin-top: rem(12);
+    margin-top: rem(13);
   }
 }
 
