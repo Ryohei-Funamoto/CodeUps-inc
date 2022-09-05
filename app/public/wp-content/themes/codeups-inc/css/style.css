@@ -1069,7 +1069,7 @@ input:-webkit-autofill {
 }
 
 .single .l-breadcrumb {
-  margin-top: 4.125rem;
+  margin-top: 3.875rem;
 }
 
 .l-container {
@@ -1125,7 +1125,12 @@ input:-webkit-autofill {
 }
 
 .l-related-posts {
-  margin-top: 7.5rem;
+  margin-top: 7.375rem;
+}
+@media screen and (min-width: 768px) {
+  .l-related-posts {
+    margin-top: 6.3125rem;
+  }
 }
 
 .l-term-nav {
@@ -1501,6 +1506,12 @@ input[type=submit].c-button--submit:not(:disabled):hover {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .p-blog-card--related-posts .p-blog-card__image::before {
+    padding-top: 58.9641434263%;
+  }
+}
+
 .p-blog-card__image > img {
   -o-object-fit: cover;
   -o-object-position: center center;
@@ -1517,6 +1528,12 @@ input[type=submit].c-button--submit:not(:disabled):hover {
   padding: 0.1875rem 1.4375rem 0;
 }
 
+@media screen and (min-width: 768px) {
+  .p-blog-card--related-posts .p-blog-card__body {
+    padding: 0.25rem 0.5rem 0;
+  }
+}
+
 .p-blog-card__title {
   -webkit-transition: color 0.5s;
   color: #333333;
@@ -1525,6 +1542,13 @@ input[type=submit].c-button--submit:not(:disabled):hover {
   letter-spacing: 0.0555555556em;
   line-height: 2;
   transition: color 0.5s;
+}
+
+@media screen and (min-width: 768px) {
+  .p-blog-card--related-posts .p-blog-card__title {
+    font-size: 0.875rem;
+    line-height: 2.5;
+  }
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -1544,7 +1568,7 @@ input[type=submit].c-button--submit:not(:disabled):hover {
   transition: color 0.5s;
 }
 
-.p-blog-card--no-description .p-blog-card__description {
+.p-blog-card--related-posts .p-blog-card__description {
   display: none;
 }
 
@@ -1570,6 +1594,12 @@ input[type=submit].c-button--submit:not(:disabled):hover {
           justify-content: space-between;
   margin-top: auto;
   padding: 0.75rem 1.4375rem 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .p-blog-card--related-posts .p-blog-card__footer {
+    padding: 0.25rem 0.5625rem 0.8125rem;
+  }
 }
 
 .p-blog-card__category-wrapper {
@@ -2487,8 +2517,13 @@ input[type=submit].c-button--submit:not(:disabled):hover {
   border: 0.0625rem solid #FFFFFF;
   font-size: 1rem;
   letter-spacing: 0.125em;
-  padding: 0.5625rem 1.6875rem;
+  padding: 0.5rem 1.5rem;
   text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .p-related-posts__title {
+    padding: 0.4375rem 1.75rem;
+  }
 }
 
 .p-related-posts__items {
@@ -2506,6 +2541,7 @@ input[type=submit].c-button--submit:not(:disabled):hover {
        -moz-column-gap: 2rem;
             column-gap: 2rem;
     grid-template-columns: repeat(4, 1fr);
+    margin-top: 5rem;
     row-gap: 0;
   }
 }

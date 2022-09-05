@@ -7,7 +7,7 @@
 
 .single-article__container {
   @include mq('md') {
-    max-width: rem(800);
+    max-width: rem(800 + strip-unit($padding-pc) * 2);
   }
 }
 
@@ -26,10 +26,10 @@
 .single-article__meta {
   align-items: center;
   display: flex;
-  margin-top: rem(16);
+  margin-top: rem(17);
 
   @include mq('md') {
-    margin-top: rem(32);
+    margin-top: rem(31);
   }
 }
 
@@ -39,7 +39,7 @@
 }
 
 .single-article__category-wrapper {
-  margin-left: rem(24);
+  margin-left: rem(28);
 }
 
 .single-article__category {
@@ -54,7 +54,7 @@
   border: rem(1) solid $color-white;
   color: $color-white;
   display: block;
-  padding: rem(8) rem(16);
+  padding: rem(11) rem(16);
   transition: background-color $duration-base, color $duration-base;
 }
 
@@ -125,7 +125,7 @@
   display: inline-block;
   font-size: rem(18);
   letter-spacing: math.div(2, 18) * 1em;
-  @include lineHeight(18, 26);
+  @include lineHeight(18, 27);
   margin-top: rem(24);
   padding-bottom: rem(3);
   position: relative;
@@ -230,7 +230,7 @@
 }
 
 .single-article__nav {
-  margin-top: rem(80);
+  margin-top: rem(78);
 
   @include mq('md') {
     margin-top: rem(103);

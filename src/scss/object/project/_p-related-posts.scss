@@ -6,8 +6,12 @@
   border: rem(1) solid $color-white;
   font-size: rem(16);
   letter-spacing: math.div(2, 16) * 1em;
-  padding: rem(9) rem(27);
+  padding: rem(8) rem(24);
   text-align: center;
+  
+  @include mq('md') {
+    padding: rem(7) rem(28);
+  }
 }
 
 .p-related-posts__items {
@@ -16,10 +20,11 @@
   grid-template-columns: 1fr;
   margin-top: rem(32);
   row-gap: rem(24);
-
+  
   @include mq('md') {
     column-gap: rem(32);
     grid-template-columns: repeat(4, 1fr);
+    margin-top: rem(80);
     row-gap: 0;
   }
 }
