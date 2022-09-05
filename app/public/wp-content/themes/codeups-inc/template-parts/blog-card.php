@@ -30,8 +30,8 @@
     </h3>
     <p class="p-blog-card__description">
       <?php
-      if (mb_strlen($post->post_content, 'UTF-8') > 80) {
-        $content = mb_substr(strip_tags($post->post_content), 0, 80, 'UTF-8');
+      if (mb_strlen($post->post_content, 'UTF-8') > 30) {
+        $content = mb_substr(strip_tags($post->post_content), 0, 30, 'UTF-8');
         echo $content . '…';
       } else {
         echo strip_tags($post->post_content);

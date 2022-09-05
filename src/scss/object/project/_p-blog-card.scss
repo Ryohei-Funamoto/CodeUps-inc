@@ -141,7 +141,11 @@
   display: flex;
   justify-content: space-between;
   margin-top: auto;
-  padding: rem(12) rem(23) rem(16);
+  padding: rem(6) rem(23) rem(16);
+  
+  @include mq('md') {
+    padding: rem(12) rem(23) rem(16);
+  }
 }
 
 .p-blog-card--related-posts .p-blog-card__footer {
