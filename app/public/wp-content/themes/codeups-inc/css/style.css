@@ -2074,7 +2074,7 @@ input[type=submit].c-button--submit:not(:disabled):hover {
   -webkit-transform: translateX(-50%) scaleY(0);
   -webkit-transform-origin: center top;
   -webkit-transition: -webkit-transform 0.5s;
-  background-color: #3D3D3D;
+  background-color: #7C7C7C;
   left: 50%;
   padding: 1.25rem 0.625rem;
   position: absolute;
