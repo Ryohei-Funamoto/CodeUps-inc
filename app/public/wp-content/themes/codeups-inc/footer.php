@@ -39,7 +39,7 @@ if (!is_page(array('contact', 'contact_thanks')) && !is_404()) {
     </div><!-- /.p-footer__upper -->
 
     <div class="p-footer__lower">
-      <p class="p-footer__copy">&copy; <?php echo date('Y'); ?> CodeUps Inc.</p>
+      <p class="p-footer__copyright">&copy;&nbsp;2021&nbsp;-&nbsp;<?php echo date('Y'); ?>&ensp;<?php echo bloginfo('name'); ?></p>
     </div><!-- /.p-footer__lower -->
   </div><!-- /.l-container p-footer__container -->
 </footer><!-- /.l-footer p-footer -->
