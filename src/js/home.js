@@ -236,8 +236,9 @@ window.addEventListener('DOMContentLoaded', function () {
         },
         stagger: {
           from: 'start',
-          amount: 0.5
-        }
+          amount: 1.0
+        },
+        duration: 1.0
       });
     },
     // 767px以下
