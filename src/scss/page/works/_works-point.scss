@@ -18,10 +18,10 @@
   font-size: rem(20);
   letter-spacing: math.div(0.4, 20) * 1em;
   padding: rem(7) rem(24);
-  transform: translate(0, rem(-23));
+  transform: translate(rem(12), rem(-25));
 
   @include mq('md') {
-    transform: translate(rem(17), rem(-23));
+    transform: translate(rem(15), rem(-24));
   }
 }
 

@@ -26,10 +26,10 @@
 .works-single-article__meta {
   align-items: center;
   display: flex;
-  margin-top: rem(16);
+  margin-top: rem(15);
 
   @include mq('md') {
-    margin-top: rem(32);
+    margin-top: rem(31);
   }
 }
 
@@ -39,7 +39,11 @@
 }
 
 .works-single-article__category-wrapper {
-  margin-left: rem(24);
+  margin-left: rem(34);
+
+  @include mq('md') {
+    margin-left: rem(35);
+  }
 }
 
 .works-single-article__category {
@@ -55,7 +59,7 @@
   border: rem(1) solid $color-white;
   color: $color-white;
   display: block;
-  padding: rem(8) rem(16);
+  padding: rem(11) rem(16);
   transition: background-color $duration-base, color $duration-base;
 }
 
