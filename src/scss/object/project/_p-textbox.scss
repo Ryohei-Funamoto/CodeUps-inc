@@ -11,7 +11,7 @@
   background-color: $color-white;
   color: $color-text02;
   font-size: rem(14);
-  padding: rem(11) rem(9);
+  padding: rem(11) rem(9) rem(12);
 
   @include mq('md') {
     padding: rem(9) rem(16);

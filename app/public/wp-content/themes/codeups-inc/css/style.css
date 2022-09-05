@@ -2314,7 +2314,7 @@ input[type=submit].c-button--submit:not(:disabled):hover {
 }
 
 .p-input-group__field {
-  margin-top: 1rem;
+  margin-top: 1.0625rem;
 }
 @media screen and (min-width: 768px) {
   .p-input-group__field {
@@ -2696,7 +2696,7 @@ input[type=submit].c-button--submit:not(:disabled):hover {
   background-color: #FFFFFF;
   color: #333333;
   font-size: 0.875rem;
-  padding: 0.6875rem 0.5625rem;
+  padding: 0.6875rem 0.5625rem 0.75rem;
 }
 @media screen and (min-width: 768px) {
   .p-textbox input[type=text],
