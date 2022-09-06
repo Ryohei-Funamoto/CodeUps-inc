@@ -18,7 +18,7 @@
 
           <figure class="single-article__eyecatch">
             <?php if (has_post_thumbnail()) : ?>
-              <?php the_post_thumbnail('large'); ?>
+              <?php the_post_thumbnail('large', array('alt' => get_the_title())); ?>
             <?php endif; ?>
           </figure><!-- /.single-article__eyecatch -->
 

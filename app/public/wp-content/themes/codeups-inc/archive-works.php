@@ -5,7 +5,7 @@
     <div class="sub-mv__image works-mv__image">
       <picture>
         <source srcset="<?php echo esc_url(get_template_directory_uri() . '/img/works/works-archive_mv.jpg'); ?>" media="(min-width: 768px)" />
-        <img src="<?php echo esc_url(get_template_directory_uri() . '/img/works/sp/works-archive_mv_sp.jpg'); ?>" alt="" />
+        <img src="<?php echo esc_url(get_template_directory_uri() . '/img/works/sp/works-archive_mv_sp.jpg'); ?>" alt="<?php post_type_archive_title(); ?>" />
       </picture>
     </div><!-- /.sub-mv__image works-mv__image -->
     <h1 class="sub-mv__title works-mv__title"><?php echo post_type_archive_title(); ?></h1>

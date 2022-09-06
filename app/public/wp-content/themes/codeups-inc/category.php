@@ -5,7 +5,7 @@
     <div class="sub-mv__image news-mv__image">
       <picture>
         <source srcset="<?php echo esc_url(get_template_directory_uri() . '/img/news/news_mv.jpg'); ?>" media="(min-width: 768px)" />
-        <img src="<?php echo esc_url(get_template_directory_uri() . '/img/news/sp/news_mv_sp.jpg'); ?>" alt="" />
+        <img src="<?php echo esc_url(get_template_directory_uri() . '/img/news/sp/news_mv_sp.jpg'); ?>" alt="<?php single_cat_title(); ?>" />
       </picture>
     </div><!-- /.sub-mv__image news-mv__image -->
     <h1 class="sub-mv__title news-mv__title"><?php echo single_cat_title(); ?></h1>
