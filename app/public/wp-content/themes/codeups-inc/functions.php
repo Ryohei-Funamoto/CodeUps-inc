@@ -28,6 +28,8 @@ require_once get_theme_file_path('/functions-parts/my_the_post_category.php');
 require_once get_theme_file_path('/functions-parts/my_the_post_term.php');
 /** 各ページのURLの一括管理 */
 require_once get_theme_file_path('/functions-parts/my_url.php');
+/** CSS読み込みのlinkタグとJS読み込みのscriptタグのtype属性をなくす */
+require_once get_theme_file_path('/functions-parts/remove_type_attribute.php');
 /** トップページ事業内容パネル設定 */
 // require_once get_theme_file_path('/functions-parts/settings_top_content_panel.php');
 /** トップページMVスライダー設定 */
