@@ -5,5 +5,9 @@
       <div class="p-post__category"><?php my_the_post_category($args['anchor'], $args['id']); ?></div><!-- /.p-post__category -->
     </div><!-- /.p-post__category-wrapper -->
   </div><!-- /.p-post__meta -->
-  <h3 class="p-post__title"><?php the_title(); ?></h3><!-- /.p-post__title -->
+  <?php if (is_front_page()) : ?>
+    <h3 class="p-post__title"><?php the_title(); ?></h3>
+  <?php elseif (is_home() || is_category()) : ?>
+    <h2 class="p-post__title"><?php the_title(); ?></h2>
+  <?php endif; ?>
 </a><!-- /.p-post -->
