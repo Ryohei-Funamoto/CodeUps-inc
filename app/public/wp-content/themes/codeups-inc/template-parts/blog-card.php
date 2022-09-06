@@ -18,7 +18,7 @@
   </div><!-- /.p-blog-card__head -->
 
   <div class="p-blog-card__body">
-    <?php if (is_post_type_archive('blog')) : ?>
+    <?php if (is_post_type_archive('blog') || is_tax('blog_genre')) : ?>
       <h2 class="p-blog-card__title">
         <?php
         if (mb_strlen($post->post_title, 'UTF-8') > 20) {
