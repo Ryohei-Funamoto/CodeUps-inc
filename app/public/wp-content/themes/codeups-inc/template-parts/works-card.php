@@ -11,6 +11,6 @@
   </div><!-- /.works-card__head -->
 
   <div class="works-card__body">
-    <h3 class="works-card__title"><?php the_title(); ?></h3>
+    <h2 class="works-card__title"><?php the_title(); ?></h2>
   </div><!-- /.works-card__body -->
 </a><!-- /.works-card -->
