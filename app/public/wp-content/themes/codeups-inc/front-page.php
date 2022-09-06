@@ -164,7 +164,7 @@
                       <div class="swiper-slide home-works-image-slider__slide">
                         <figure class="home-works-image-slider__image">
                           <?php if (has_post_thumbnail()) : ?>
-                            <?php the_post_thumbnail('large', array('alt' => the_title_attribute(array('echo' => true)))); ?>
+                            <?php the_post_thumbnail('large', array('alt' => get_the_title())); ?>
                           <?php else : ?>
                             <img src="<?php echo esc_url(get_template_directory_uri() . '/img/common/noimg.png') ?>" alt="">
                           <?php endif; ?>
