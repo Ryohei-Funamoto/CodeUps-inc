@@ -15,8 +15,8 @@ app/public/wp-content/uploads/
 app/public/wp-content/index.php
 app/public/wp-content/ai1wm-backups/
 app/public/wp-content/ewww/
-app/public/wp-content/themes/twentytwentytwo/
-app/public/wp-content/themes/index.php
+app/public/wp-content/themes/
+!app/public/wp-content/themes/codeups-inc
 
 app/sql/
 
