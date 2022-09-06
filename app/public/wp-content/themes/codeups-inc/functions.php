@@ -28,6 +28,8 @@ require_once get_theme_file_path('/functions-parts/my_the_post_category.php');
 require_once get_theme_file_path('/functions-parts/my_the_post_term.php');
 /** 各ページのURLの一括管理 */
 require_once get_theme_file_path('/functions-parts/my_url.php');
+/** global-styles-inline-cssをなくす */
+require_once get_theme_file_path('/functions-parts/remove_my_global_styles.php');
 /** CSS読み込みのlinkタグとJS読み込みのscriptタグのtype属性をなくす */
 require_once get_theme_file_path('/functions-parts/remove_type_attribute.php');
 /** トップページ事業内容パネル設定 */
