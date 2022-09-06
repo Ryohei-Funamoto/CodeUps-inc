@@ -34,3 +34,5 @@ require_once get_theme_file_path('/functions-parts/my_url.php');
 require_once get_theme_file_path('/functions-parts/settings_top_mv_slider.php');
 /** トップページ制作実績スライダー設定 */
 // require_once get_theme_file_path('/functions-parts/settings_top_works_slider.php');
+/** Contact Form 7に自動で出力されるpタグやbrタグを無効化 */
+require_once get_theme_file_path('/functions-parts/wpcf7_autop_return_false.php');
