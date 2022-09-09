@@ -1,7 +1,9 @@
 'use strict';
 
 window.addEventListener('DOMContentLoaded', function () {
-  /** ハンバーガーメニュー */
+  /**
+   * ハンバーガーメニュー
+   */
   var hamburger = document.querySelector('.js-hamburger');
   var drawer = document.querySelector('.js-drawer');
 
@@ -17,7 +19,10 @@ window.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  /** 画面幅が768px以上リサイズされた時にドロワーを強制的に閉じる */
+  /**
+   * 画面幅が768px以上リサイズされた時に
+   * ドロワーを強制的に閉じる
+   */
   window.addEventListener('resize', function () {
     if (window.matchMedia('(min-width: 768px)').matches) {
       hamburger.classList.remove('is-open');
@@ -26,7 +31,9 @@ window.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  /** トップへ戻るボタン */
+  /**
+   * トップへ戻るボタン
+   */
   var toTop = document.querySelector('.js-to-top');
 
   window.addEventListener('scroll', function () {
@@ -42,6 +49,43 @@ window.addEventListener('DOMContentLoaded', function () {
       top: 0,
       behavior: 'smooth',
     });
+  });
+
+  /**
+   * スクロールアニメーション
+   */
+  // 監視対象の要素を全取得
+  const animeTargets = document.querySelectorAll('.js-animation-target');
+
+  // 監視対象の要素がrootと交差した時に発動させる処理
+  function callback(entries, obs) {
+    entries.forEach(entry => {
+      // 監視対象の要素とrootとの交差が終わったら処理を発動させない
+      if (!entry.isIntersecting) {
+        return;
+      }
+
+      // 監視対象の要素がrootと交差している時に以下の処理を発動させる
+      entry.target.classList.add('is-appear');
+
+      // 処理が終わったら監視を止める
+      obs.unobserve(entry.target);
+    });
+  }
+
+  // オプション
+  const options = {
+    root: null, // 監視する領域を指定。初期値nullはviewport全体
+    rootMargin: '-40% 0%', // 監視する領域の広さを指定
+    threshold: 0.25 // 監視対象の要素がrootとどれくらい交差した時に処理を実行するかを指定
+  }
+
+  // IntersectionObserverのインスタンスを作成
+  const observer = new IntersectionObserver(callback, options);
+
+  // 監視対象の要素を監視する
+  animeTargets.forEach(target => {
+    observer.observe(target);
   });
 });
 
@@ -141,21 +185,21 @@ window.addEventListener('DOMContentLoaded', function () {
   // });
 
   // ページのURLを取得
-	const url = $(location).attr('href'),
-	// headerの高さを取得してそれに30px追加した値をheaderHeightに代入
-	headerHeight = $('.l-header').outerHeight() + 30;
+  const url = $(location).attr('href'),
+    // headerの高さを取得してそれに30px追加した値をheaderHeightに代入
+    headerHeight = $('.l-header').outerHeight() + 30;
 
-	// urlに「#」が含まれていれば
-	if(url.indexOf("#") != -1){
-		// urlを#で分割して配列に格納
-		const anchor = url.split("#"),
-		// 分割した最後の文字列（#◯◯の部分）をtargetに代入
-		target = $('#' + anchor[anchor.length - 1]),
-		// リンク先の位置からheaderHeightの高さを引いた値をpositionに代入
-		position = Math.floor(target.offset().top) - headerHeight;
-		// positionの位置に移動
-		$("html, body").animate({
-      scrollTop:position
+  // urlに「#」が含まれていれば
+  if (url.indexOf("#") != -1) {
+    // urlを#で分割して配列に格納
+    const anchor = url.split("#"),
+      // 分割した最後の文字列（#◯◯の部分）をtargetに代入
+      target = $('#' + anchor[anchor.length - 1]),
+      // リンク先の位置からheaderHeightの高さを引いた値をpositionに代入
+      position = Math.floor(target.offset().top) - headerHeight;
+    // positionの位置に移動
+    $("html, body").animate({
+      scrollTop: position
     }, 500, 'swing');
-	}
+  }
 })(jQuery);

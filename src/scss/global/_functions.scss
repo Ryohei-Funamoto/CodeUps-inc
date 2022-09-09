@@ -1,6 +1,6 @@
+@use "variables" as *;
 @use "sass:math";
 @use "sass:map";
-@use "./variables" as *;
 
 // remへの計算式（16pxを基準としている。10pxを基準とする場合は16を10に変更する）
 @function rem($pixels) {

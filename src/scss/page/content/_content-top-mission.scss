@@ -1,6 +1,16 @@
 @use "global" as *;
 @use "sass:math";
 
+.content-top-mission {
+  opacity: 0;
+}
+
+.content-top-mission.is-appear {
+  animation-duration: 0.75s;
+  animation-fill-mode: forwards;
+  animation-name: fadeUp;
+}
+
 .content-top-mission__container {
   @include mq('md') {
     max-width: rem(648);

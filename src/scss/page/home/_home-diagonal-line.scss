@@ -33,12 +33,25 @@
   }
 }
 
-.home-diagonal-line__extend-color {
+.home-diagonal-line__body::before {
   background-color: $color-main-accent;
+  content: "";
   height: 100%;
   left: 0;
+  opacity: 0;
   position: absolute;
   top: 0;
   width: 100%;
-  z-index: -3;
+}
+
+.home-diagonal-line--downward.is-appear .home-diagonal-line__body::before {
+  animation-duration: 1.25s;
+  animation-fill-mode: forwards;
+  animation-name: extendLeft;
+}
+
+.home-diagonal-line--upward.is-appear .home-diagonal-line__body::before {
+  animation-duration: 1.25s;
+  animation-fill-mode: forwards;
+  animation-name: extendRight;
 }

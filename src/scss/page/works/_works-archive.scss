@@ -12,3 +12,13 @@
     row-gap: rem(118);
   }
 }
+
+.works-archive__item {
+  opacity: 0;
+}
+
+.works-archive__item.is-appear {
+  animation-duration: 0.75s;
+  animation-fill-mode: forwards;
+  animation-name: zoomIn;
+}

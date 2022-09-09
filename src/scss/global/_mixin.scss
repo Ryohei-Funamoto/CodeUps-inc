@@ -1,6 +1,6 @@
-@use "sass:map";
+@use "variables" as *;
 @use "sass:math";
-@use "./variables" as *;
+@use "sass:map";
 
 // メディアクエリ
 @mixin mq($breakpoint: md) {

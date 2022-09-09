@@ -2,10 +2,19 @@
 @use "sass:math";
 
 .home-works-media {
+  opacity: 0;
+
   @include mq('md') {
     align-items: center;
     display: flex;
   }
+}
+
+.is-appear .home-works-media {
+  animation-delay: 0.75s;
+  animation-duration: 0.75s;
+  animation-fill-mode: forwards;
+  animation-name: fadeIn;
 }
 
 .home-works-media__head {

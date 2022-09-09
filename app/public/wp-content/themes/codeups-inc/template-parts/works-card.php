@@ -1,4 +1,4 @@
-<a href="<?php the_permalink(); ?>" class="works-card">
+<a href="<?php the_permalink(); ?>" class="<?php echo $args['class']; ?>">
   <div class="works-card__head">
     <figure class="works-card__image">
       <?php if (has_post_thumbnail()) : ?>

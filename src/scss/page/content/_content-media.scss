@@ -16,6 +16,7 @@
 
 .content-media__head {
   margin: 0 calc(50% - 50vw);
+  opacity: 0;
   position: relative;
   width: 100vw;
 
@@ -25,14 +26,44 @@
   }
 }
 
+.content-media.is-appear .content-media__head {
+  animation-duration: 0.75s;
+  animation-fill-mode: forwards;
+  animation-name: fadeIn;
+}
+
 .content-media:nth-child(even) .content-media__head {
   @include mq('md') {
     margin-left: rem(30);
   }
 }
 
+.content-media__head::before {
+  background-color: $color-bg02;
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.content-media.is-appear .content-media__head::before {
+  animation-duration: 0.75s;
+  animation-name: extendLeftShrinkRight;
+  animation-fill-mode: forwards;
+}
+
 .content-media__image {
+  opacity: 0;
   position: relative;
+}
+
+.content-media.is-appear .content-media__image {
+  animation-delay: 0.45s;
+  animation-duration: 0.75s;
+  animation-fill-mode: forwards;
+  animation-name: fadeIn;
 }
 
 .content-media__image::before {
@@ -56,12 +87,19 @@
 }
 
 .content-media__body {
+  opacity: 0;
   padding-top: rem(24);
 
   @include mq('md') {
     padding-top: rem(10);
     width: calc(100% - #{rem(550)} - #{rem(30)});
   }
+}
+
+.content-media.is-appear .content-media__body {
+  animation-duration: 0.75s;
+  animation-fill-mode: forwards;
+  animation-name: fadeUp;
 }
 
 .content-media:nth-child(odd) .content-media__body {
@@ -93,13 +131,4 @@
     @include lineHeight(16, 35);
     margin-top: rem(28);
   }
-}
-
-.content-media__extend-bg {
-  background-color: $color-bg02;
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
 }

@@ -40,13 +40,39 @@
 
 .home-blog__item {
   display: flex;
+  opacity: 0;
+}
+
+.home-blog__item.is-appear {
+  animation-duration: 0.75s;
+  animation-fill-mode: forwards;
+  animation-name: fadeUp;
+}
+
+.home-blog__item:nth-child(3n + 2).is-appear {
+  @include mq('md') {
+    animation-delay: 0.25s;
+  }
+}
+
+.home-blog__item:nth-child(3n).is-appear {
+  @include mq('md') {
+    animation-delay: 0.5s;
+  }
 }
 
 .home-blog__button {
   margin-top: rem(24);
+  opacity: 0;
   text-align: center;
 
   @include mq('md') {
     margin-top: rem(48);
   }
+}
+
+.home-blog__button.is-appear {
+  animation-duration: 0.75s;
+  animation-fill-mode: forwards;
+  animation-name: fadeUp;
 }

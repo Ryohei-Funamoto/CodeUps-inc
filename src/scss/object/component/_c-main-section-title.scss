@@ -10,6 +10,16 @@
   }
 }
 
-.c-main-section-title>span {
+.c-main-section-title span {
   display: inline-block;
+}
+
+.c-main-section-title--fade-up span {
+  opacity: 0;
+}
+
+.c-main-section-title--fade-up.is-appear span {
+  animation-duration: 0.75s;
+  animation-fill-mode: forwards;
+  animation-name: fadeUp;
 }

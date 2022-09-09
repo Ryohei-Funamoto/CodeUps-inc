@@ -11,3 +11,20 @@
     font-size: rem(110);
   }
 }
+
+.c-sub-section-title--fade-right,
+.c-sub-section-title--fade-left {
+  opacity: 0;
+}
+
+.c-sub-section-title--fade-right.is-appear {
+  animation-duration: 0.75s;
+  animation-fill-mode: forwards;
+  animation-name: fadeRight;
+}
+
+.c-sub-section-title--fade-left.is-appear {
+  animation-duration: 0.75s;
+  animation-fill-mode: forwards;
+  animation-name: fadeLeft;
+}

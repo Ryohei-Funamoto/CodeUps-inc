@@ -2,11 +2,20 @@
 @use "sass:math";
 
 .home-overview-media {
+  opacity: 0;
+
   @include mq('md') {
     align-items: center;
     display: flex;
     flex-direction: row-reverse;
   }
+}
+
+.is-appear .home-overview-media {
+  animation-delay: 0.75s;
+  animation-duration: 0.75s;
+  animation-fill-mode: forwards;
+  animation-name: fadeIn;
 }
 
 .home-overview-media__head {

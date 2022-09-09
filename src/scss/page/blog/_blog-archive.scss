@@ -15,4 +15,23 @@
 
 .blog-archive__item {
   display: flex;
+  opacity: 0;
+}
+
+.blog-archive__item.is-appear {
+  animation-duration: 0.75s;
+  animation-name: fadeUp;
+  animation-fill-mode: forwards;
+}
+
+.blog-archive__item:nth-child(3n + 2).is-appear {
+  @include mq('md') {
+    animation-delay: 0.25s;
+  }
+}
+
+.blog-archive__item:nth-child(3n).is-appear {
+  @include mq('md') {
+    animation-delay: 0.5s;
+  }
 }

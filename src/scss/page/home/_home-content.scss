@@ -40,3 +40,35 @@
     margin-top: rem(-36);
   }
 }
+
+.home-content__item {
+  opacity: 0;
+}
+
+.home-content__item.is-appear {
+  animation-duration: 0.75s;
+  animation-name: flipRight;
+  animation-fill-mode: forwards;
+}
+
+.home-content__item:nth-child(2n).is-appear {
+  animation-delay: 0.25s;
+}
+
+.home-content__item:nth-child(4n + 2).is-appear {
+  @include mq('md') {
+    animation-delay: 0.25s;
+  }
+}
+
+.home-content__item:nth-child(4n + 3).is-appear {
+  @include mq('md') {
+    animation-delay: 0.5s;
+  }
+}
+
+.home-content__item:nth-child(4n).is-appear {
+  @include mq('md') {
+    animation-delay: 0.75s;
+  }
+}

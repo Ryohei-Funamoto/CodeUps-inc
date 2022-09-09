@@ -27,9 +27,9 @@
       $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
       if (have_posts()) :
       ?>
-        <ul class="blog-archive__items js-blog-cards">
+        <ul class="blog-archive__items">
           <?php while (have_posts()) : the_post(); ?>
-            <li class="blog-archive__item js-blog-card">
+            <li class="blog-archive__item js-animation-target">
               <?php
               $args = array(
                 'class' => 'p-blog-card',

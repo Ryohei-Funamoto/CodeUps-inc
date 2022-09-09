@@ -29,9 +29,10 @@
       ?>
         <ul class="works-archive__items">
           <?php while (have_posts()) : the_post(); ?>
-            <li class="works-archive__item js-works-card">
+            <li class="works-archive__item js-animation-target">
               <?php
               $args = array(
+                'class' => 'works-card',
                 'anchor' => false,
                 'id' => $post->ID,
                 'tax' => 'works_genre',
