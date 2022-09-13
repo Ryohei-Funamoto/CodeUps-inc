@@ -89,6 +89,41 @@ window.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+window.addEventListener('load', function () {
+  // ヘッダーの高さを取得
+  const header = document.querySelector('.l-header');
+  let headerHeight = header.clientHeight;
+  // URLの#以降を取得
+  let urlHash = location.hash;
+
+  // URLに#がある場合
+  if (urlHash) {
+    // 遷移先のページトップに移動
+    window.scrollTo({
+      top: 0
+    });
+
+    // 別ページの特定箇所へのスムーススクロール
+    const pageTransition = function () {
+      // 遷移先の要素を取得
+      const targetElement = document.querySelector(urlHash);
+      // 遷移先の要素のページトップからの位置座標を取得
+      // window.pageYOffset -> ウィンドウのスクロール量
+      // targetElement.getBoundingClientRect().top -> 現在位置と遷移先の要素の距離
+      const targetOffsetTop = window.pageYOffset + targetElement.getBoundingClientRect().top - headerHeight;
+
+      // 遷移先へスムーススクロール
+      window.scrollTo({
+        top: targetOffsetTop,
+        behavior: "smooth"
+      });
+    }
+
+    // 100ミリ秒後にスムーススクロールを実行
+    setTimeout(pageTransition, 100);
+  }
+});
+
 (function ($) {
 
   // PC/SP判定
@@ -183,23 +218,4 @@ window.addEventListener('DOMContentLoaded', function () {
   //   }, speed, 'swing');
   //   return false;
   // });
-
-  // ページのURLを取得
-  const url = $(location).attr('href'),
-    // headerの高さを取得してそれに30px追加した値をheaderHeightに代入
-    headerHeight = $('.l-header').outerHeight() + 30;
-
-  // urlに「#」が含まれていれば
-  if (url.indexOf("#") != -1) {
-    // urlを#で分割して配列に格納
-    const anchor = url.split("#"),
-      // 分割した最後の文字列（#◯◯の部分）をtargetに代入
-      target = $('#' + anchor[anchor.length - 1]),
-      // リンク先の位置からheaderHeightの高さを引いた値をpositionに代入
-      position = Math.floor(target.offset().top) - headerHeight;
-    // positionの位置に移動
-    $("html, body").animate({
-      scrollTop: position
-    }, 500, 'swing');
-  }
 })(jQuery);
