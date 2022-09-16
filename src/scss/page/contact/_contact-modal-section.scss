@@ -1,0 +1,39 @@
+@use "global" as *;
+
+.contact-modal-section__title {
+  color: $color-text02;
+  font-size: rem(16);
+  font-weight: $bold;
+  padding-left: rem(12);
+  position: relative;
+  
+  @include mq('md') {
+    font-size: rem(18);
+  }
+}
+
+.contact-modal-section__title::before {
+  background-color: $color-gray-600;
+  border-radius: rem(2);
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: rem(4);
+}
+
+.contact-modal-section__description {
+  color: $color-text02;
+  font-size: rem(14);
+  
+  @include mq('md') {
+    font-size: rem(16);
+  }
+}
+
+.contact-modal-section__title + .contact-modal-section__description {
+  margin-top: rem(12);
+}

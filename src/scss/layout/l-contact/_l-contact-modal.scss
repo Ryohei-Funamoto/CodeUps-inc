@@ -1,0 +1,12 @@
+@use "global" as *;
+
+.l-contact-modal {
+  height: calc(100% - rem(40) * 2);
+  left: 50%;
+  max-width: rem(1000);
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% - rem(20) * 2);
+  z-index: $layer-modal;
+}

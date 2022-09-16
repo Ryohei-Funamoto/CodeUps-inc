@@ -33,6 +33,19 @@
   margin: 0;
 }
 
+.p-checkbox--acceptance input[type="checkbox"]+span>a {
+  color: $color-main-accent;
+  text-decoration: underline;
+  transition: opacity $duration-base;
+}
+
+.p-checkbox--acceptance input[type="checkbox"]+span>a:focus,
+.p-checkbox--acceptance input[type="checkbox"]+span>a:hover {
+  @include mq('hover-pc') {
+    opacity: $opacity;
+  }
+}
+
 .p-checkbox input[type="checkbox"]+span::before {
   background-color: #FFFFFF;
   border: rem(1) solid #888888;

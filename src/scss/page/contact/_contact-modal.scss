@@ -1,0 +1,80 @@
+@use "global" as *;
+
+.contact-modal {
+  background-color: $color-white;
+  opacity: 0;
+  padding: rem(32) rem(16);
+  transition: opacity $duration-base, visibility $duration-base;
+  visibility: hidden;
+  
+  @include mq('md') {
+    padding: rem(48);
+  }
+}
+
+.contact-modal.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.contact-modal__title {
+  color: $color-text02;
+  font-size: rem(20);
+  font-weight: $bold;
+  text-align: center;
+  
+  @include mq('md') {
+    font-size: rem(24);
+  }
+}
+
+.contact-modal__close-icon {
+  cursor: pointer;
+  height: rem(24);
+  position: absolute;
+  right: rem(12);
+  top: rem(12);
+  width: rem(24);
+  
+  @include mq('md') {
+    height: rem(32);
+    right: rem(20);
+    top: rem(20);
+    width: rem(32);
+  }
+}
+
+.contact-modal__close-icon::before,
+.contact-modal__close-icon::after {
+  background-color: $color-black;
+  content: '';
+  display: block;
+  height: rem(3);
+  left: 0;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+}
+
+.contact-modal__close-icon::before {
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+.contact-modal__close-icon::after {
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.contact-modal__body {
+  margin-top: rem(24);
+  height: calc(100% - rem(30) - rem(24));
+  overflow-y: auto;
+  
+  @include mq('md') {
+    margin-top: rem(36);
+    height: calc(100% - rem(36) - rem(36));
+  }
+}
+
+.contact-modal__section:nth-child(n + 2) {
+  margin-top: rem(24);
+}

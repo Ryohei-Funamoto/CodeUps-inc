@@ -1842,6 +1842,13 @@ input[type=submit].c-button--submit {
   margin: 0;
 }
 
+.p-checkbox--acceptance input[type=checkbox] + span > a {
+  -webkit-transition: opacity 0.5s;
+  color: #F9F871;
+  text-decoration: underline;
+  transition: opacity 0.5s;
+}
+
 .p-checkbox input[type=checkbox] + span::before {
   -webkit-transform: translateY(-50%);
   background-color: #FFFFFF;
@@ -3844,6 +3851,11 @@ button.swiper-pagination-bullet {
 
   .p-breadcrumb a:focus,
   .p-breadcrumb a:hover {
+    opacity: 0.7;
+  }
+
+  .p-checkbox--acceptance input[type=checkbox] + span > a:focus,
+  .p-checkbox--acceptance input[type=checkbox] + span > a:hover {
     opacity: 0.7;
   }
 

@@ -75,5 +75,9 @@ function my_script_init()
   if (is_singular('works')) {
     wp_enqueue_script('works-single-script', get_template_directory_uri() . '/js/works-single.js', array('jquery'), date('YmdGis', filemtime(get_theme_file_path('/js/works-single.js'))), true);
   }
+  /** contact.js */
+  if (is_page('contact')) {
+    wp_enqueue_script('contact-script', get_template_directory_uri() . '/js/contact.js', array('jquery'), date('YmdGis', filemtime(get_theme_file_path('/js/contact.js'))), true);
+  }
 }
 add_action('wp_enqueue_scripts', 'my_script_init');
