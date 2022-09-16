@@ -31,7 +31,7 @@ global $u_contact; // お問い合わせ
   <?php wp_body_open(); ?>
 
   <header class="<?php if (is_singular(array('post', 'works', 'blog')) || is_page('contact-thanks') || is_404()) {
-                    echo 'l-header p-header is-colored';
+                    echo 'l-header p-header js-header is-colored';
                   } else {
                     echo 'l-header p-header js-header';
                   } ?>">

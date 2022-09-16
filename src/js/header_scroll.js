@@ -1,17 +1,28 @@
 'use strict';
 
-window.addEventListener('DOMContentLoaded', function () {
-  /** MVを過ぎるとヘッダーに色が付く */
-  var header = document.querySelector('.js-header');
-  var mv = document.querySelector('.js-mv');
+/**
+ * DOM
+ */
+// メインビジュアル
+const mv = document.querySelector('.js-mv');
 
-  window.addEventListener('scroll', function () {
-    var mvHeight = mv.clientHeight;
+/**
+ * 関数
+ */
+// ヘッダーがメインビジュアルを通過すると色が付く
+const headerScroll = function () {
+  // メインビジュアルの高さを取得
+  let mvHeight = mv.clientHeight;
+  // ヘッダーがメインビジュアルを通過したかどうか
+  if (window.pageYOffset > mvHeight) {
+    header.classList.add('is-colored');
+  } else {
+    header.classList.remove('is-colored');
+  }
+};
 
-    if (window.pageYOffset > mvHeight) {
-      header.classList.add('is-colored');
-    } else {
-      header.classList.remove('is-colored');
-    }
-  });
-});
+/**
+ * イベント
+ */
+// 画面をスクロールした時
+window.addEventListener('scroll', headerScroll);
