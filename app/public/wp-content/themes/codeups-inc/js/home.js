@@ -37,6 +37,17 @@ const homeMVslider = new Swiper('.js-home-mv-slider', {
   },
   speed: 2000,
 });
+// News
+const homeNewsSlider = new Swiper('.js-home-news', {
+  direction: 'vertical',
+  loop: true,
+  slidesPerView: 1,
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
+  },
+  speed: 500,
+});
 // Works画像
 const homeWorksImageSlider = new Swiper('.js-home-works-image-slider', {
   slidesPerView: 1,
@@ -50,13 +61,11 @@ const homeWorksImageSlider = new Swiper('.js-home-works-image-slider', {
     el: '.js-home-works-pagination',
     clickable: true,
   },
-  disableOnInteraction: false,
 });
 // Worksインフォメーション
 const homeWorksInfoSlider = new Swiper('.js-home-works-info-slider', {
   loop: true,
   spaceBetween: 10,
-  disableOnInteraction: false,
 });
 // Works 2つのスライダーを連動させる
 homeWorksImageSlider.controller.control = homeWorksInfoSlider;

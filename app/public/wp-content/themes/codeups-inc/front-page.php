@@ -49,23 +49,25 @@
     <div class="l-container home-news__container">
       <div class="home-news__inner">
         <?php
-        $news_query = latest_sub_query('post', 1);
+        $news_query = latest_sub_query('post', 3);
         if ($news_query->have_posts()) :
         ?>
-          <ul class="home-news__items">
-            <?php while ($news_query->have_posts()) : $news_query->the_post(); ?>
-              <li class="home-news__item js-animation-target">
-                <?php
-                $args = array(
-                  'anchor' => false,
-                  'id' => $post->ID,
-                  'mod' => 'hover-underline',
-                );
-                get_template_part('template-parts/post', null, $args);
-                ?>
-              </li><!-- /.home-news__item -->
-            <?php endwhile; ?>
-          </ul><!-- /.home-news__items -->
+          <div class="swiper home-news__slider js-home-news">
+            <div class="swiper-wrapper home-news__items">
+              <?php while ($news_query->have_posts()) : $news_query->the_post(); ?>
+                <div class="swiper-slide home-news__item">
+                  <?php
+                  $args = array(
+                    'anchor' => false,
+                    'id' => $post->ID,
+                    'mod' => 'hover-underline',
+                  );
+                  get_template_part('template-parts/post', null, $args);
+                  ?>
+                </div><!-- /.swiper-slide home-news__item -->
+              <?php endwhile; ?>
+            </div><!-- /.swiper-wrapper home-news__items -->
+          </div><!-- /.swiper home-news__slider -->
         <?php
         endif;
         wp_reset_postdata();
