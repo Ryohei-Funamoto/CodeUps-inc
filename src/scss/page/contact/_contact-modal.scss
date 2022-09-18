@@ -2,10 +2,9 @@
 
 .contact-modal {
   background-color: $color-white;
-  opacity: 0;
   padding: rem(32) rem(16);
-  transition: opacity $duration-base, visibility $duration-base;
-  visibility: hidden;
+  transform: translateY(-150%);
+  transition: transform $duration-base;
   
   @include mq('md') {
     padding: rem(48);
@@ -13,8 +12,7 @@
 }
 
 .contact-modal.is-open {
-  opacity: 1;
-  visibility: visible;
+  transform: translateY(0);
 }
 
 .contact-modal__title {

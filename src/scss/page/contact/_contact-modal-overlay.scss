@@ -3,12 +3,9 @@
 
 .contact-modal-overlay {
   background-color: color.adjust($color-black, $alpha: -0.36);
-  opacity: 0;
-  transition: opacity $duration-base, visibility $duration-base;
-  visibility: hidden;
+  display: none;
 }
 
 .contact-modal-overlay.is-open {
-  opacity: 1;
-  visibility: visible;
+  display: block;
 }

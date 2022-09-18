@@ -4,9 +4,11 @@
  * DOM
  */
 // 「プライバシーポリシー」ボタン
-const modalOpenButton = document.querySelector('.js-privacy-policy input[type="checkbox"]+span>a');
+const modalOpenButton = document.querySelector('.js-modal-open-button');
 // モーダルを閉じるボタン
 const modalCloseButton = document.querySelector('.js-modal-close-button');
+// モーダルの周りの背景
+const modalOverlay = document.querySelector('.js-modal-overlay');
 
 /**
  * 関数
@@ -38,7 +40,13 @@ modalOpenButton.addEventListener('click', function (e) {
 });
 // モーダルを閉じるボタンをクリックした時
 modalCloseButton.addEventListener('click', function () {
-  let target = modalOpenButton.dataset.target;
+  let target = modalCloseButton.dataset.target;
+  let targetElements = document.getElementsByClassName(target);
+  modalClose(targetElements);
+});
+// モーダルの周りの背景をクリックした時
+modalOverlay.addEventListener('click', function () {
+  let target = modalOverlay.dataset.target;
   let targetElements = document.getElementsByClassName(target);
   modalClose(targetElements);
 });
