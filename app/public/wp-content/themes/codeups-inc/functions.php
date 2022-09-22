@@ -22,8 +22,6 @@ require_once get_theme_file_path('/functions-parts/my_register_fields.php');
 require_once get_theme_file_path('/functions-parts/my_script_init.php');
 /** テーマのセットアップ */
 require_once get_theme_file_path('/functions-parts/my_setup.php');
-/** 投稿に紐づいているカテゴリーの取得・表示 */
-require_once get_theme_file_path('/functions-parts/my_the_post_category.php');
 /** 投稿に紐づいているタームの取得・表示 */
 require_once get_theme_file_path('/functions-parts/my_the_post_term.php');
 /** 各ページのURLの一括管理 */

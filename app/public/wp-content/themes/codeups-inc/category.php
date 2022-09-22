@@ -27,6 +27,7 @@
                 'anchor' => false,
                 'id' => $post->ID,
                 'mod' => 'hover-colored',
+                'tax' => 'category',
               );
               get_template_part('template-parts/post', null, $args);
               ?>

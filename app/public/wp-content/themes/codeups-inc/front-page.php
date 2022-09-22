@@ -61,6 +61,7 @@
                     'anchor' => false,
                     'id' => $post->ID,
                     'mod' => 'hover-underline',
+                    'tax' => 'category',
                   );
                   get_template_part('template-parts/post', null, $args);
                   ?>

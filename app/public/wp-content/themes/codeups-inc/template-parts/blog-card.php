@@ -67,11 +67,7 @@
   <div class="p-blog-card__footer">
     <div class="p-blog-card__category-wrapper">
       <div class="p-blog-card__category">
-        <?php if (is_singular('post')) : ?>
-          <?php my_the_post_category($args['anchor'], $args['id']); ?>
-        <?php elseif (is_front_page() || is_post_type_archive('blog') || is_tax('blog_genre') || is_singular(array('works', 'blog'))) : ?>
-          <?php my_the_post_term($args['anchor'], $args['id'], $args['tax']); ?>
-        <?php endif; ?>
+        <?php my_the_post_term($args['anchor'], $args['id'], $args['tax']); ?>
       </div>
     </div><!-- /.p-blog-card__category-wrapper -->
     <time datetime="<?php the_time('c'); ?>" class="p-blog-card__published"><?php the_time('Y.m.d'); ?></time>

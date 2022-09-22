@@ -12,7 +12,7 @@
           <div class="single-article__meta">
             <time datetime="<?php the_time('c'); ?>" class="single-article__published"><?php the_time('Y.m.d'); ?></time>
             <div class="single-article__category-wrapper">
-              <div class="single-article__category"><?php my_the_post_category(true, $post->ID); ?></div>
+              <div class="single-article__category"><?php my_the_post_term(true, $post->ID, 'category'); ?></div>
             </div><!-- /.single-article__category-wrapper -->
           </div><!-- /.single-article__meta -->
 
@@ -70,6 +70,7 @@
                 'class' => 'p-blog-card p-blog-card--related-posts',
                 'anchor' => false,
                 'id' => $post->ID,
+                'tax' => 'category',
               );
               get_template_part('template-parts/blog-card', null, $args);
               ?>
