@@ -38,7 +38,7 @@ const homeMVslider = new Swiper('.js-home-mv-slider', {
   speed: 2000,
 });
 // News
-const homeNewsSlider = new Swiper('.js-home-news', {
+const homeNewsSlider = new Swiper('.js-home-news-slider', {
   direction: 'vertical',
   loop: true,
   slidesPerView: 1,
@@ -47,6 +47,15 @@ const homeNewsSlider = new Swiper('.js-home-news', {
     disableOnInteraction: false,
   },
   speed: 500,
+});
+// Newsスライダーが画面に現れるまでautoplayを停止させる
+homeNewsSlider.autoplay.stop();
+// Newsスライダーが画面に現れたらautoplayを開始させる
+window.addEventListener('scroll', function () {
+  let position = window.pageYOffset + document.querySelector('.js-home-news-slider').getBoundingClientRect().top - window.innerHeight;
+  if (window.pageYOffset > position) {
+    homeNewsSlider.autoplay.start();
+  }
 });
 // Works画像
 const homeWorksImageSlider = new Swiper('.js-home-works-image-slider', {
@@ -70,3 +79,12 @@ const homeWorksInfoSlider = new Swiper('.js-home-works-info-slider', {
 // Works 2つのスライダーを連動させる
 homeWorksImageSlider.controller.control = homeWorksInfoSlider;
 homeWorksInfoSlider.controller.control = homeWorksImageSlider;
+// Worksスライダーが画面に現れるまでautoplayを停止させる
+homeWorksImageSlider.autoplay.stop();
+// Worksスライダーが画面に現れたらautoplayを開始させる
+window.addEventListener('scroll', function () {
+  let position = window.pageYOffset + document.querySelector('.js-home-works-image-slider').getBoundingClientRect().top - window.innerHeight;
+  if (window.pageYOffset > position) {
+    homeWorksImageSlider.autoplay.start();
+  }
+});

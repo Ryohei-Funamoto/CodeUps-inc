@@ -52,7 +52,7 @@
         $news_query = latest_sub_query('post', 3);
         if ($news_query->have_posts()) :
         ?>
-          <div class="swiper home-news__slider js-home-news">
+          <div class="swiper home-news__slider js-home-news-slider">
             <div class="swiper-wrapper home-news__items">
               <?php while ($news_query->have_posts()) : $news_query->the_post(); ?>
                 <div class="swiper-slide home-news__item">
