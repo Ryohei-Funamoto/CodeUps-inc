@@ -59,9 +59,8 @@
                   <?php
                   $args = array(
                     'anchor' => false,
-                    'id' => $post->ID,
-                    'mod' => 'hover-underline',
                     'tax' => 'category',
+                    'mod' => 'hover-underline',
                   );
                   get_template_part('template-parts/post', null, $args);
                   ?>
@@ -282,7 +281,6 @@
               $args = array(
                 'class' => 'p-blog-card',
                 'anchor' => false,
-                'id' => $post->ID,
                 'tax' => 'blog_genre',
               );
               get_template_part('template-parts/blog-card', null, $args);

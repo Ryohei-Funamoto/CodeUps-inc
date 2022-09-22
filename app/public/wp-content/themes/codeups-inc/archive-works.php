@@ -34,7 +34,6 @@
               $args = array(
                 'class' => 'works-card',
                 'anchor' => false,
-                'id' => $post->ID,
                 'tax' => 'works_genre',
               );
               get_template_part('template-parts/works-card', null, $args);

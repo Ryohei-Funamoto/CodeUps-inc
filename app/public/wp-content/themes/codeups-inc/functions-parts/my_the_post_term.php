@@ -3,7 +3,7 @@
 /** 
  * 投稿に紐づいているタームの取得・表示
  */
-function my_the_post_term($anchor = true, $id = 0, $tax = '')
+function my_the_post_term($anchor = true, $tax = null,  $id = 0)
 {
   global $post;
   if (0 === $id) {

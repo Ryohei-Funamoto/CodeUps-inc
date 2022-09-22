@@ -2,7 +2,7 @@
   <div class="p-post__meta">
     <time datetime="<?php the_time('c') ?>" class="p-post__published"><?php the_time('Y.m.d'); ?></time>
     <div class="p-post__category-wrapper">
-      <div class="p-post__category"><?php my_the_post_term($args['anchor'], $args['id'], $args['tax']); ?></div><!-- /.p-post__category -->
+      <div class="p-post__category"><?php my_the_post_term($args['anchor'], $args['tax'], $args['id']); ?></div><!-- /.p-post__category -->
     </div><!-- /.p-post__category-wrapper -->
   </div><!-- /.p-post__meta -->
   <?php if (is_front_page()) : ?>

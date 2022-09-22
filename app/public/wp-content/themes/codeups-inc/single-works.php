@@ -12,7 +12,7 @@
           <div class="works-single-article__meta">
             <time datetime="<?php the_time('c'); ?>" class="works-single-article__published"><?php the_time('Y.m.d'); ?></time>
             <div class="works-single-article__category-wrapper">
-              <div class="works-single-article__category"><?php my_the_post_term(true, $post->ID, 'works_genre'); ?></div>
+              <div class="works-single-article__category"><?php my_the_post_term(true, 'works_genre'); ?></div>
             </div><!-- /.works-single-article__category-wrapper -->
           </div><!-- /.works-single-article__meta -->
 
@@ -101,7 +101,6 @@
               $args = array(
                 'class' => 'p-blog-card p-blog-card--related-posts',
                 'anchor' => false,
-                'id' => $post->ID,
                 'tax' => 'works_genre',
               );
               get_template_part('template-parts/blog-card', null, $args);

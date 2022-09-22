@@ -25,9 +25,8 @@
               <?php
               $args = array(
                 'anchor' => false,
-                'id' => $post->ID,
-                'mod' => 'hover-colored',
                 'tax' => 'category',
+                'mod' => 'hover-colored',
               );
               get_template_part('template-parts/post', null, $args);
               ?>

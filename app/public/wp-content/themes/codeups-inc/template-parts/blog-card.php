@@ -67,7 +67,7 @@
   <div class="p-blog-card__footer">
     <div class="p-blog-card__category-wrapper">
       <div class="p-blog-card__category">
-        <?php my_the_post_term($args['anchor'], $args['id'], $args['tax']); ?>
+        <?php my_the_post_term($args['anchor'], $args['tax'], $args['id']); ?>
       </div>
     </div><!-- /.p-blog-card__category-wrapper -->
     <time datetime="<?php the_time('c'); ?>" class="p-blog-card__published"><?php the_time('Y.m.d'); ?></time>
