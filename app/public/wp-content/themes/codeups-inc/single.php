@@ -43,19 +43,7 @@
   <?php endif; ?>
 
   <?php
-  $categories = get_the_category();
-  $cat_ids = array();
-  foreach ($categories as $category) {
-    $cat_ids[] = $category->term_id;
-  }
-  $args = array(
-    'post_type' => 'post',
-    'posts_per_page' => 4,
-    'post__not_in' => array($post->ID),
-    'orderby' => 'rand',
-    'category__in' => $cat_ids,
-  );
-  $related_post = new WP_Query($args);
+  $related_post = related_sub_query('post', 'category');
   if ($related_post->have_posts()) :
   ?>
     <div class="l-related-posts p-related-posts">

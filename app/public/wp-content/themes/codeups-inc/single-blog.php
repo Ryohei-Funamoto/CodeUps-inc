@@ -43,24 +43,7 @@
   <?php endif; ?>
 
   <?php
-  $terms = get_the_terms($post->ID, 'blog_genre');
-  foreach ($terms as $term) {
-    $term_slug = $term->slug;
-  }
-  $args = array(
-    'post_type' => 'blog',
-    'posts_per_page' => 4,
-    'post__not_in' => array($post->ID),
-    'orderby' => 'rand',
-    'tax_query' => array(
-      array(
-        'taxonomy' => 'blog_genre',
-        'field' => 'slug',
-        'terms' => array($term->slug),
-      ),
-    ),
-  );
-  $related_post = new WP_Query($args);
+  $related_post = related_sub_query('blog', 'blog_genre');
   if ($related_post->have_posts()) :
   ?>
     <div class="l-related-posts p-related-posts">

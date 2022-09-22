@@ -26,6 +26,8 @@ require_once get_theme_file_path('/functions-parts/my_setup.php');
 require_once get_theme_file_path('/functions-parts/my_the_post_term.php');
 /** 各ページのURLの一括管理 */
 require_once get_theme_file_path('/functions-parts/my_url.php');
+/** 関連記事のサブクエリ */
+require_once get_theme_file_path('/functions-parts/related_sub_query.php');
 /** global-styles-inline-cssをなくす */
 require_once get_theme_file_path('/functions-parts/remove_my_global_styles.php');
 /** CSS読み込みのlinkタグとJS読み込みのscriptタグのtype属性をなくす */
