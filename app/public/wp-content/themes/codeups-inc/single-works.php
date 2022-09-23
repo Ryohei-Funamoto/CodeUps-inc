@@ -86,14 +86,13 @@
     <?php endwhile; ?>
   <?php endif; ?>
 
-  <?php
-  $related_post = related_sub_query('works', 'works_genre');
-  if ($related_post->have_posts()) :
-  ?>
-    <div class="l-related-posts p-related-posts">
-      <div class="l-container p-related-posts__container">
-        <div class="p-related-posts__title">関連記事</div>
-
+  <div class="l-related-posts p-related-posts">
+    <div class="l-container p-related-posts__container">
+      <div class="p-related-posts__title">関連記事</div>
+      <?php
+      $related_post = related_sub_query('works', 'works_genre');
+      if ($related_post->have_posts()) :
+      ?>
         <ul class="p-related-posts__items">
           <?php while ($related_post->have_posts()) : $related_post->the_post(); ?>
             <li class="p-related-posts__item">
@@ -108,12 +107,14 @@
             </li><!-- /.p-related-posts__item -->
           <?php endwhile; ?>
         </ul><!-- /.p-related-posts__items -->
-      </div><!-- /.l-container p-related-posts__container -->
-    </div><!-- /.l-related-posts p-related-posts -->
-  <?php
-  endif;
-  wp_reset_postdata();
-  ?>
+      <?php else : ?>
+        <p>記事はありません。</p>
+      <?php
+      endif;
+      wp_reset_postdata();
+      ?>
+    </div><!-- /.l-container p-related-posts__container -->
+  </div><!-- /.l-related-posts p-related-posts -->
 </main><!-- /.l-works-single -->
 
 <?php get_footer(); ?>

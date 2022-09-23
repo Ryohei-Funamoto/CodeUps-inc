@@ -41,6 +41,8 @@
             </li><!-- /.works-archive__item -->
           <?php endwhile; ?>
         </ul><!-- /.works-archive__items -->
+      <?php else : ?>
+        <p>記事はありません。</p>
       <?php endif; ?>
     </div><!-- /.l-container works-archive__container -->
   </div><!-- /.l-works__archive l-works-archive works-archive -->

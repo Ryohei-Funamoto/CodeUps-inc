@@ -33,6 +33,8 @@
             </li><!-- /.news-archive__item -->
           <?php endwhile; ?>
         </ul><!-- /.news-archive__items -->
+      <?php else : ?>
+        <p>記事はありません。</p>
       <?php endif; ?>
     </div><!-- /.l-container news-archive__container -->
   </div><!-- /.l-news__archive l-news-archive news-archive -->

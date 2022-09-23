@@ -41,6 +41,8 @@
             </li><!-- /.blog-archive__item -->
           <?php endwhile; ?>
         </ul><!-- /.blog-archive__items -->
+      <?php else : ?>
+        <p>記事はありません。</p>
       <?php endif; ?>
     </div><!-- /.l-container blog-archive__container -->
   </div><!-- /.l-blog__archive l-blog-archive blog-archive -->

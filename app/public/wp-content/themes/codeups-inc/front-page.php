@@ -68,6 +68,8 @@
               <?php endwhile; ?>
             </div><!-- /.swiper-wrapper home-news__items -->
           </div><!-- /.swiper home-news__slider -->
+        <?php else : ?>
+          <p>記事はありません。</p>
         <?php
         endif;
         wp_reset_postdata();
@@ -212,6 +214,8 @@
               </div><!-- /.home-works-media__button -->
             </div><!-- /.home-works-media__body -->
           </div><!-- /.home-works__media home-works-media -->
+        <?php else : ?>
+          <p>記事はありません。</p>
         <?php
         endif;
         wp_reset_postdata();
@@ -288,6 +292,8 @@
             </li><!-- /.home-blog__item -->
           <?php endwhile; ?>
         </ul><!-- /.home-blog__items -->
+      <?php else : ?>
+        <p>記事はありません。</p>
       <?php
       endif;
       wp_reset_postdata();
