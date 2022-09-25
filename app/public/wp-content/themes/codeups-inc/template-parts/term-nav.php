@@ -1,7 +1,7 @@
 <div class="l-term-nav p-term-nav">
   <div class="l-container p-term-nav__container">
     <ul class="p-term-nav__items">
-      <?php if (is_post_type_archive('works') || is_post_type_archive('blog')) : ?>
+      <?php if (is_home() || is_post_type_archive(array('works', 'blog'))) : ?>
         <li class="p-term-nav__item is-active">ALL</li>
         <?php
         $terms = get_terms($args['tax'], array(
@@ -13,7 +13,7 @@
         ?>
           <li class="p-term-nav__item"><a href="<?php echo esc_url(get_term_link($term, $args['tax'])); ?>"><?php echo esc_html($term->name); ?></a></li>
         <?php endforeach; ?>
-      <?php elseif (is_tax('works_genre') || is_tax('blog_genre')) : ?>
+      <?php elseif (is_category() || is_tax(array('works_genre', 'blog_genre'))) : ?>
         <li class="p-term-nav__item"><a href="<?php echo get_post_type_archive_link($args['post_type']); ?>">ALL</a></li>
         <?php
         $term_obj = get_queried_object();

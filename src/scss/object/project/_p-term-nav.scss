@@ -1,6 +1,12 @@
 @use "global" as *;
 @use "sass:math";
 
+.l-news .p-term-nav__container {
+  @include mq('md') {
+    max-width: rem(940);
+  }
+}
+
 .p-term-nav__items {
   display: flex;
   flex-wrap: wrap;

@@ -3715,6 +3715,10 @@ button.swiper-pagination-bullet {
     row-gap: 0;
   }
 
+  .l-news .p-term-nav__container {
+    max-width: 58.75rem;
+  }
+
   .p-term-nav__items {
     margin-bottom: -1.25rem;
   }

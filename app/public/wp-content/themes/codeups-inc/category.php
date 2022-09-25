@@ -13,6 +13,14 @@
 
   <?php get_template_part('template-parts/breadcrumb'); ?>
 
+  <?php
+  $args = array(
+    'post_type' => 'post',
+    'tax' => 'category',
+  );
+  get_template_part('template-parts/term-nav', null, $args);
+  ?>
+
   <div class="l-news__archive l-news-archive news-archive">
     <div class="l-container news-archive__container">
       <?php
