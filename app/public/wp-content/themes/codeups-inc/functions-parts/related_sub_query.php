@@ -14,9 +14,10 @@ function related_sub_query($post_type = null, $tax = null, $id = 0)
   }
   // タームを取得
   $terms = get_the_terms($id, $tax);
+  $terms_slug = array();
   foreach ($terms as $term) {
     // タームのスラッグを取得して変数に代入
-    $term_slug = $term->slug;
+    $terms_slug[] = $term->slug;
   }
   $args = array(
     'post_type' => $post_type,
@@ -27,7 +28,7 @@ function related_sub_query($post_type = null, $tax = null, $id = 0)
       array(
         'taxonomy' => $tax,
         'field' => 'slug',
-        'terms' => array($term_slug),
+        'terms' => $terms_slug,
       ),
     ),
   );
