@@ -19,49 +19,13 @@
 
   <div class="p-blog-card__body">
     <?php if (is_post_type_archive('blog') || is_tax('blog_genre')) : ?>
-      <h2 class="p-blog-card__title">
-        <?php
-        if (mb_strlen($post->post_title, 'UTF-8') > 20) {
-          $title = mb_substr($post->post_title, 0, 20, 'UTF-8');
-          echo $title . '…';
-        } else {
-          echo $post->post_title;
-        }
-        ?>
-      </h2>
+      <h2 class="p-blog-card__title"><?php echo my_flexible_title($post->post_title, 20); ?></h2>
     <?php elseif (is_front_page()) : ?>
-      <h3 class="p-blog-card__title">
-        <?php
-        if (mb_strlen($post->post_title, 'UTF-8') > 20) {
-          $title = mb_substr($post->post_title, 0, 20, 'UTF-8');
-          echo $title . '…';
-        } else {
-          echo $post->post_title;
-        }
-        ?>
-      </h3>
+      <h3 class="p-blog-card__title"><?php echo my_flexible_title($post->post_title, 20); ?></h3>
     <?php elseif (is_singular(array('post', 'works', 'blog'))) : ?>
-      <div class="p-blog-card__title">
-        <?php
-        if (mb_strlen($post->post_title, 'UTF-8') > 20) {
-          $title = mb_substr($post->post_title, 0, 20, 'UTF-8');
-          echo $title . '…';
-        } else {
-          echo $post->post_title;
-        }
-        ?>
-      </div>
+      <div class="p-blog-card__title"><?php echo my_flexible_title($post->post_title, 20); ?></div>
     <?php endif; ?>
-    <p class="p-blog-card__description">
-      <?php
-      if (mb_strlen($post->post_content, 'UTF-8') > 30) {
-        $content = mb_substr(strip_tags($post->post_content), 0, 30, 'UTF-8');
-        echo $content . '…';
-      } else {
-        echo strip_tags($post->post_content);
-      }
-      ?>
-    </p>
+    <p class="p-blog-card__description"><?php echo my_flexible_excerpt($post->post_content, 30); ?></p>
   </div><!-- /.p-blog-card__body -->
 
   <div class="p-blog-card__footer">

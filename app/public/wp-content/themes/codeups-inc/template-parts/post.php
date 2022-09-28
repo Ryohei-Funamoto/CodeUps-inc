@@ -6,16 +6,7 @@
     </div><!-- /.p-post__category-wrapper -->
   </div><!-- /.p-post__meta -->
   <?php if (is_front_page()) : ?>
-    <h3 class="p-post__title">
-      <?php
-      if (mb_strlen($post->post_title, 'UTF-8') > 20) {
-        $title = mb_substr($post->post_title, 0, 20, 'UTF-8');
-        echo $title . '…';
-      } else {
-        echo $post->post_title;
-      }
-      ?>
-    </h3><!-- /.p-post__title -->
+    <h3 class="p-post__title"><?php echo my_flexible_title($post->post_title, 20); ?></h3>
   <?php elseif (is_home() || is_category()) : ?>
     <h2 class="p-post__title"><?php the_title(); ?></h2>
   <?php endif; ?>

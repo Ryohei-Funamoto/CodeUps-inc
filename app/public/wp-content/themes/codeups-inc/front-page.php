@@ -192,15 +192,7 @@
                           if ($dev_points[0]['works_point_description']) :
                           ?>
                             <p class="home-works-info__description">
-                              <?php
-                              if (mb_strlen($dev_points[0]['works_point_description'], 'UTF-8') > 100) {
-                                $content = mb_substr(strip_tags($dev_points[0]['works_point_description']), 0, 100, 'UTF-8');
-                                echo $content . '…';
-                              } else {
-                                echo strip_tags($dev_points[0]['works_point_description']);
-                              }
-                              ?>
-                            </p><!-- /.home-works-info__description -->
+                            <?php echo my_flexible_excerpt($dev_points[0]['works_point_description'], 100); ?></p>
                           <?php endif; ?>
                         </div><!-- /.home-works-info-slider__info home-works-info -->
                       </div><!-- /.home-works-info-slider__slide -->
