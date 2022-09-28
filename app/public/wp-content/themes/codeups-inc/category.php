@@ -8,7 +8,7 @@
         <img src="<?php echo esc_url(get_template_directory_uri() . '/img/news/sp/news_mv_sp.jpg'); ?>" alt="<?php single_cat_title(); ?>" />
       </picture>
     </div><!-- /.sub-mv__image news-mv__image -->
-    <h1 class="sub-mv__title news-mv__title"><?php echo single_cat_title(); ?></h1>
+    <h1 class="sub-mv__title news-mv__title"><?php single_cat_title(); ?></h1>
   </div><!-- /.l-news__mv l-sub-mv l-news-mv sub-mv news-mv -->
 
   <?php get_template_part('template-parts/breadcrumb'); ?>

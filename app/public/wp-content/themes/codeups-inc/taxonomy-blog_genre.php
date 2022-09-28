@@ -8,7 +8,7 @@
         <img src="<?php echo esc_url(get_template_directory_uri() . '/img/blog/sp/blog-archive_mv_sp.jpg'); ?>" alt="<?php single_term_title(); ?>" />
       </picture>
     </div><!-- /.sub-mv__image blog-mv__image -->
-    <h1 class="sub-mv__title blog-mv__title"><?php echo single_term_title(); ?></h1>
+    <h1 class="sub-mv__title blog-mv__title"><?php single_term_title(); ?></h1>
   </div><!-- /.l-blog__mv l-sub-mv l-blog-mv sub-mv blog-mv -->
 
   <?php get_template_part('template-parts/breadcrumb'); ?>
